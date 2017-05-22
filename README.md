@@ -34,7 +34,6 @@ COS301 CodeX team repository, this is where all the files for the main project w
   </tr>
 </table>
 
-The Broadsword team will be responsible for the implementation of the Web Navigation system.
-A documentation of our system has also been provided.
+The CodeX team will be responsible of the implementation of the Reroute Systems Project.
 
 <br/>
