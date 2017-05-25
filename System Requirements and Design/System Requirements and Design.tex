@@ -129,6 +129,24 @@ The application will run on the Android operating system, specifically version 4
 				\item Login
 				\item Retrieve Whole Seller Accounts 
 				\item Search Product 
+				
+				\textbf{Pre-condition: } The user has to have been logged in successfully.  \\
+				\textbf{Post-condition: } The user must be logged out. \\
+				\begin{center}
+				\begin{tabular}{ |p{8cm}|p{8cm}| }
+				 \hline
+  				\textbf{Actor:} User & \textbf{System:} Logout \\
+				 \hline
+				 0. User clicks on the profile button & - \\
+				 \hline
+				- & 2. System retriveies profile information and displays it\\
+				 \hline
+				 3. User clicks On the logout button on the profile tab & - \\
+				 \hline
+				- & 4. Signal is sent to the server and the system logs the user out\\
+				 \hline
+				\end{tabular}
+				\end{center}
 				\item Logout
 			\end{itemize} 
 		\item \textbf{Important} 
