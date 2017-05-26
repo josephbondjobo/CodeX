@@ -75,6 +75,7 @@
 
 	\subsection{Background} 
 	Reroute Systems is a software company with different in-house developed applications. The Purchase Management System application is the main application and mainly active in the 		pharmaceutical space. The main functionality of the system is routing of request for products from account holders to the various wholesalers / suppliers, receiving the result of the order and route answer back to account holder.
+	
 	\subsection{Purpose} 	
 	For the account holder to request a product he/she must search for it against the database with all the product information, the challenge is that each wholesalers / suppliers can name/describe the product differently and when the account holder do the search against the master product list the same product must be displayed across all wholesalers / suppliers using the link between master product list and the different wholesalers / suppliers product list (the user compare the prices of same product across the wholesalers / suppliers before making a decision)
 	\subsection{Scope} 
@@ -158,22 +159,26 @@ The application will run on the Android operating system, specifically version 4
 				\item Search Product 
 				
 				\textbf{Pre-condition: } The user has to have been logged in successfully.  \\
-				\textbf{Post-condition: } The user must be logged out. \\
+				\textbf{Post-condition: }  System returns possible matches, or search not found. \\
 				\begin{center}
 				\begin{tabular}{ |p{8cm}|p{8cm}| }
 				 \hline
-  				\textbf{Actor:} User & \textbf{System:} Logout \\
+  				\textbf{Actor:} User & \textbf{System: Purchase Management System Application} Searching Product \\
 				 \hline
-				 0. User clicks on the profile button & - \\
+				 - & 0. TUCBW System displays search bar\\
 				 \hline
-				- & 2. System retriveies profile information and displays it\\
+				  1. User clicks search bar, and enters product name & 2. System retriveies profile information and displays it\\
 				 \hline
-				 3. User clicks On the logout button on the profile tab & - \\
+				 - & 4. System returns and displays all matches found (name variants inclusive) as well as  generics for product name, arranged according to prices and suppliers. \\
 				 \hline
-				- & 4. Signal is sent to the server and the system logs the user out\\
+				5. User selects appropriate match, or changes search conditions & - 
 				 \hline
+				7. TUCEW user makes decision by selecting preferred choice of product. & - 
+				\hline
+				
 				\end{tabular}
 				\end{center}
+				
 				\item Logout
 			\end{itemize} 
 		\item \textbf{Important} 
