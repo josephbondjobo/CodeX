@@ -75,6 +75,7 @@
 
 	\subsection{Background} 
 	Reroute Systems is a software company with different in-house developed applications. The Purchase Management System application is the main application and mainly active in the 		pharmaceutical space. The main functionality of the system is routing of request for products from account holders to the various wholesalers / suppliers, receiving the result of the order and route answer back to account holder.
+	
 	\subsection{Purpose} 	
 	For the account holder to request a product he/she must search for it against the database with all the product information, the challenge is that each wholesalers / suppliers can name/describe the product differently and when the account holder do the search against the master product list the same product must be displayed across all wholesalers / suppliers using the link between master product list and the different wholesalers / suppliers product list (the user compare the prices of same product across the wholesalers / suppliers before making a decision)
 	\subsection{Scope} 
@@ -82,6 +83,7 @@
 of performing some machine learning in order to retrieve the product in a master file found in a Databased running on the server through http calls. The high level modules and their responsibilities are shown in the figure below. \\ \\
 	\includegraphics[scale=0.62]{scope1.jpg}
 	\subsection{Definitions, Acronyms, and Abbreviations} 
+
 	\begin{itemize} 
 	\item Cloud-based : refers to applications, services or resources made available to users on demand via the Internet from a cloud computing provider's servers.
 	\item Android : Mobile Operating System that allows the mobile phone to operate and install different apps in it.
@@ -168,7 +170,8 @@ There will be two main types of users interacting with the system, namely a gene
     	\subsection{Constraints}   
     	\subsection{Assumptions and Dependencies}
 
-	\section{Specific Acquirements}
+		
+	\section{Specific Requirements}
 This section gives a detailed description of the system requirements. It describes all the functional as well as the quality requirements of the system.
 
 	\subsection{External Interface Requirements}
@@ -176,29 +179,101 @@ This section gives a detailed description of the system requirements. It describ
                  \subsubsection{User Interfaces}
 
                  \subsubsection{Software Interfaces}
-The application will run on the Android operating system, specifically version 4.0. and upwards.It will also run on iOS operating system version 7.3 and above.
+The application will run on the Android operating system, specifically version 4.0. and upwards. It will also run on iOS operating system version 7.3 and above.
 
-	\subsection{Functional Requirements}
-	\subsubsection{Use case prioritization} 
+	\subsection{Requirements}
+	\subsubsection{Functional Requirements} 
+	1.	Fuzzy Search:\\\\
+	This program must be able to locate and return products that are related to the searched term. It should be able to return the 	same product if various ways of writing the name is used.\\\\
+	
+	2.	Fast Run-time:\\\\
+	Because there are very large amount of data to be searched, it is vital for our program to be very efficient.  Even though this could be a non-functional requirement, it is vital for this program to be as fast and efficient as possible.\\\\
+	
+	3.	Handle Concurrent Users:\\\\
+	This program will be used by many people, in many different fields simultaneously. It is therefore very important for it to be able to handle multiple users at the same time.\\\\
+	
+	4.	Machine Learning:\\\\
+	In order for this program to run efficiently it must be able to adapt to the needs and habits of its users. It should be able to learn search patterns and learn from previous searches.\\\\
+	\subsubsection{Non-Functional Requirements}
+	1.	Predictive Typing:\\\\
+	Predictive typing is when the program suggests a possible solution as the user is typing. This is often based on previous searches and most common searches. This will help improve the user experience. \\\\
+
+	2.	Return Generic Medicine:\\\\
+	In some cases it will be handy if the program suggested the different generic medicine for the medicine you searched for. This could help users find the product they need even if they are unsure of the name.
+	
+	3.	Robustness:\\\\
+	This product should be able to adapt to different users in various fields as well as to different habits, interfaces, environments and needs of users.  
+	
+	4.	Storing and using search history: 
+	Being able to store the search history will increase the user experience, help with predictive typing and improve the programs ability to learn and adapt.
+
+	
+	\subsubsection{Use Case Prioritization} 
 		\begin{enumerate} 
 		\item \textbf{Critical} 
 			\begin{itemize} 
 				\item Login
 				\item Retrieve Wholesalers Accounts 
 				\item Search Product 
+				
+				\textbf{Pre-condition: } The user has to have been logged in successfully.  \\
+				\textbf{Post-condition: }  System returns possible matches, or search not found. \\
+				\begin{center}
+				\begin{tabular}{ |p{8cm}|p{8cm}| }
+				 \hline
+  				\textbf{Actor:} User & \textbf{System: Purchase Management System Application} Searching Product \\
+				 \hline
+				 - & 0. TUCBW System displays search bar\\
+				 \hline
+				  1. User clicks search bar, and enters product name & 2. System retriveies profile information and displays it\\
+				 \hline
+				 - & 4. System returns and displays all matches found (name variants inclusive) as well as  generics for product name, arranged according to prices and suppliers. \\
+				 \hline
+				5. User selects appropriate match, or changes search conditions & - \\
+				 \hline
+				7. TUCEW user makes decision by selecting preferred choice of product. & - \\
+				\hline
+				
+				\end{tabular}
+				\end{center}
+				
 				\item Logout
 			\end{itemize} 
 		\item \textbf{Important} 
 
-		\item \textbf{Nice to have} 
+		\item \textbf{Nice to have}
+		System using a search history, predictive typing, returning generic medicines. \\\\
 		\end{enumerate} 
 
 	\subsection{Performance Requirements}
-
+	{Performance Requirements bullet list:\\\\
+	The performance requirements of the Rerouting Purchasing System can be sub-divided into two components, which are the following:
+	Client Application\\\\
+	1.	The Software needs to be responsive and lightweight enough to run on both mobile hardware as well on desktop (i.e. web).\\\\
+	2.	During User search the Smart Searching system will need to perform in real time showing results as necessary.\\\\
+	3.	The data usage should be kept to a minimum as to not overload the whole system's Wi-Fi infrastructure being used for non-searching purposes.\\\\
+	
+	Server Performance Requirements\\\\
+	1.	The system should be able to handle multiple users using the smart seart.\\\\
+	2.	The system has to be able run at a high speed, returning the results of a search immediately.\\\\
+	3.	The system should be able to handle a capacity of requests made to the database to make efficient searches and matches. \\\\
+	4.	The system should be able to return matches of a high probility of available data in the database on the cloud.\\\\
+	
 	\subsection{Design Constraints}
 
 	\subsection{Software System Attributes}
-
+	{The software system will have the following attributes:
+\\\\
+		Availability: The system and its functions will be available to any registered user as long as there is an Internet connection. 
+\\\\
+		Reliability: The system will provide results that are available on the database to match whatever a user performs a search/smart search.
+\\\\
+		Portability: The system will be able to function across a multitude of interfaces. Therefore, it will be able to port between Android and iOS with ease, as well as on ordinary web. 
+\\\\
+		Maintainability: The application will be able to be extended easily with new functionality. There will also be a good test environment to reduce and make it easy to find system errors.  
+\\\\
+		Robustness: The system will be able to stand against errors made by users in the search, returning no results and error messages as a result.}
+        
 	\subsection{Other Requirements}
 
 \subsubsection{Quality requirements}
