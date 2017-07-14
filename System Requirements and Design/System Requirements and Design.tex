@@ -187,7 +187,7 @@ This section gives a detailed description of the system requirements. It describ
 	\subsection{External Interface Requirements}
 
                  \subsubsection{Software Interfaces}
-The application will run on the Android operating system, specifically version 4.0. and upwards. It will also run on iOS operating system version 7.3 and above.
+The smart search application being build will be sesigned to run on Desktop running Windows OS.
 
 	\subsection{Requirements}
 	\subsubsection{Functional Requirements} 
@@ -209,9 +209,6 @@ The application will run on the Android operating system, specifically version 4
 		\begin{itemize}
 		\item Predictive Typing:\\\\
 			Predictive typing is when the program suggests a possible solution as the user is typing. This is often based on previous searches and most common searches. This will help improve the user experience. \\\\
-
-		\item Return Generic Medicine:\\\\
-			In some cases it will be handy if the program suggested the different generic medicine for a medicine/product one searched for. This could help users find the product they need even if they are unsure of the name.
 	
 		\item Robustness:\\\\
 			This product should be able to adapt to different users in various fields as well as to different habits, interfaces, environments and needs of users.  
@@ -244,9 +241,9 @@ The application will run on the Android operating system, specifically version 4
 				 \hline
 				 - & 0. TUCBW System displays search bar\\
 				 \hline
-				  1. User clicks search bar, and enters product name & 2. System retriveies profile information and displays it\\
+				  1. User clicks search bar, and enters product name & 2. System retrieves profile information and displays it\\
 				 \hline
-				 - & 4. System returns and displays all matches found (name variants inclusive) as well as  generics for product name, arranged according to prices and suppliers. \\
+				 - & 4. System returns and displays all matches found (name variants inclusive)  arranged according to prices and suppliers. \\
 				 \hline
 				5. User selects appropriate match, or changes search conditions & - \\
 				 \hline
@@ -261,11 +258,14 @@ The application will run on the Android operating system, specifically version 4
 		\item \textbf{Important} 
 
 		\item \textbf{Nice to have}
-		System using a search history, predictive typing, returning generic medicines. \\\\
+		\begin{itemize}
+		\item System using a search history, predictive typing. 
+		\item A moble version of the system such as Android.
+		\end{itemize}
 		\end{enumerate} 
 
 	\subsection{Performance Requirements}
-	The performance requirements of the Rerouting Purchasing System can be sub-divided into two components, of which are the following:
+	The performance requirements of the smart search app. can be sub-divided into two components, of which are the following:
 	
 	\item Client Application:\\\\
 		\begin{itemize}
@@ -297,7 +297,7 @@ The application will run on the Android operating system, specifically version 4
 \\\\
 		\item Reliability: The system will provide results that are available on the database to match whenever a user performs a search/smart search.
 \\\\
-		\item Portability: The system will be able to function across a multiple interfaces. Therefore, it will be able to port between Android and iOS with ease, as well as on ordinary web. 
+		\item Portability: The system will be able to function across a multiple interfaces. Therefore, it will be able to port to Android and iOS with ease at a later time. 
 \\\\
 		\item Maintainability: The application will be able to be extended easily with new functionality. There will also be a good test environment to reduce and make it easy to find system errors.  
 \\\\
