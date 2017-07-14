@@ -140,7 +140,8 @@ For the account user interface, the registered users will be able to login to th
 		{
 The actual Wi-Fi interface between the mobile device/computer and Wi-Fi will be abstracted by the phone and will be managed by the actual underlying operating system on the phone. On a computer the LAN interface may also be abstracted by the computer and will be managed by the actual underlying operating system on the computer if a wired connection is to be used.}
             \subsubsection{Software Interface}
-            (to be completed)
+           {
+	   The software consists of the basic client-server system. The customers will interact with the client side of the system. There they will search for products, place orders, and manage their accounts. The client will pass the customer's requests to the server who performs the needed dataretrieval and interaction. The server will, if data is needed, send the needed service request to the database system. The database system will perform the request and return the requested data. The client and server systems will be seperate from the database system and will only use it as a plug-in. Keeping the three seperate will minimize the damage of errors and ease maintanance. The server will need to be able to handle multiple requests at the same time, it will need to be multi-threaded.  Also, keeping the database system seperate from the rest of the system allows the developers to easily change to a new or better database service.}
 
 	    \subsubsection{Communications Interface}
 	 \begin{itemize}
