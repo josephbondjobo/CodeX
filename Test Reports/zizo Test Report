@@ -1,15 +1,27 @@
 Report on zizo
 (Heinrich Burgers)
 
-Zizo is a database system that focusses on fast and efficient work with very large datasets. I found it to be scalable, easy to use and very efficient. It copes well with large quantities of data and gives the user freedom to do easy and efficient data manipulation. 
+Zizo is a database system that focusses on fast and efficient work with very large datasets. 
+I found it to be scalable, easy to use and very efficient. It copes well with large quantities of data
+and gives the user freedom to do easy and efficient data manipulation. 
 
 Interface:
-By default zizo makes use of the pathway interface. It is an easy to use and understand, drag and drop styled interface. This allows people with little experience to use zizo with little training. This interface can be adapted to suit your needs. Normally there is an application that uses zizo as a service. This application will be written by us (the Codex team) and will be used by customers. The pathway interface is normally used by the developing team to setup the services. 
+By default zizo makes use of the pathway interface. It is an easy to use and understand, 
+drag and drop styled interface. This allows people with little experience to use zizo with little training. 
+This interface can be adapted to suit your needs. Normally there is an application that uses zizo as a service. 
+This application will be written by us (the Codex team) and will be used by customers. 
+The pathway interface is normally used by the developing team to setup the services. 
 
 Efficiency:
-Zizo’s main focus is to deliver fast results when working with large databases (Billions of records). Companies like Data-Re have encountered 20ms for a billion records. Zizo performs exceptionally well when working with repetitive data. It uses pointers to form links between related data that allows fast and efficient data retrieval between related products. The concept of fuzzy-searches can further be achieved by the use of regular expressions.  This will, however, require upkeep and updates as data changes but not more than other databases. 
+Zizo’s main focus is to deliver fast results when working with large databases (Billions of records). 
+Companies like Data-Re have encountered 20ms for a billion records. Zizo performs exceptionally well when working 
+with repetitive data. It uses pointers to form links between related data that allows fast and efficient data 
+retrieval between related products. The concept of fuzzy-searches can further be achieved by the use of regular expressions.  
+This will, however, require upkeep and updates as data changes but not more than other databases. 
 
 How it links to our project:
-Zizo is very scalable and flexible. I believe that we can achieve a fast and efficient database system by making use of the services zizo has to offer. By using its ability to link related data and filter data, we can achieve a fast and efficient system. 
+Zizo is very scalable and flexible. I believe that we can achieve a fast and efficient database system by 
+making use of the services zizo has to offer. By using its ability to link related data and filter data, we 
+can achieve a fast and efficient system. 
 
 
