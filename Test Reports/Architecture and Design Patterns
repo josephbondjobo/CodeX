@@ -12,7 +12,10 @@ Architectures:
                     acted upon and updated independently.
                     
   
-  Client Server-
+  Client Server- This architecure complements our project quite well as it is a network architecture where each computer or
+                 process is either a client or a server. In our case our database will act as our server and the requests being 
+                 made to the server will come from service requesters called clients. The server will share its resources with 
+                 the clients.
   
 Design Patterns:
   Composite-
