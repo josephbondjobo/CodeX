@@ -77,25 +77,28 @@
 	Reroute Systems is a software company with different in-house developed applications. The Purchase Management System application is the main application and is mainly active in the pharmaceutical space. The main functionality of this system is routing of requests for products from account holders to various wholesalers/suppliers, receiving the result of the order and routing the answer back to account holder.
 	
 	\subsection{Purpose} 	
-	For an account holder to request a product, he/she must search for it against the database with all the product information. The challenge is that each wholesaler/supplier can name/describe the product in a different way/manner, and when the account holder performs the search against the master product list, the same product must be displayed across all wholesalers/suppliers, using the link between master product list and the different wholesaler's/supplier's product list (The user compares the prices of same product across the wholesalers/suppliers before making a decision.
+	For an account holder to request a product, s/he must search for it against the database with all the product information. The challenge is that each wholesaler/supplier can name/describe the product in a different way/manner, and when the account holder performs the search against the master product list, the same product must be displayed across all wholesalers/suppliers, using the link between master product list and the different wholesaler's/supplier's product list.
 	\subsection{Scope} 
 	The core of the system is a search engine which is enriched with functionality
-of performing some machine learning in order to retrieve the product in a master file found in a database running on the server through HTTP calls. The high level modules and their responsibilities are shown in the figure below. \\ \\
+of performing some machine learning in order to retrieve the product in a master file found in a database running on the server through RESTful calls. The high level modules and their responsibilities are shown in the figure below. \\ \\
 	\includegraphics[scale=0.62]{scope1.jpg}
 	\subsection{Definitions, Acronyms, and Abbreviations} 
 
 	\begin{itemize} 
 	\item Cloud-based: Refers to applications, services or resources made available to users on demand via the Internet from a cloud computing provider's servers.
 	\item Android: Mobile Operating System that allows the mobile phone to operate and install different apps in it.
-	\item AI Search: The use of Artificial Intelligence to search the database by implementing machine learning techniques and other algorithms to find and retrieve data
-	\item Smart Search: (To be Completed)
+	\item Smart Search: The use of Artificial Intelligence to search the database by implementing machine learning techniques and other algorithms to find and retrieve data.
 	\item REST: Representational State Transfer. It is a architectural pattern consisting of guidelines and best practices
 for creating scalable web services.
 	\end{itemize}
 	\subsection{References} 
-	
-	\subsection{Overview} 
-	The Purchase Management System application is the main application and is mainly active in the pharmaceutical space and called \textbf{Smart Rep} that can be found on the Google Play store. It allows one to place orders of a product through mobile devices such as Android and also through Desktop as it is a cloud based system. This system monitors the routing of orders from devices to the server to different wholesalers and bring back the result.
+	(To be completed)
+	\subsection{Stakeholders}
+	The stakeholders of the syste includes the following
+	\begin{itemize}
+	\item \textbf{The client} is Diederik Mostert, Software Director of ReRoute Systems who proposed the project as a result of a challenge faced in the company, which is to search a product on master file with different combination used by each wholesaler.
+	\item \textbf{Users in pharmaceutical space} They will use the system tor etrieve information of the product they need.
+	\end{itemize}
 
 	\newpage
 
@@ -114,7 +117,7 @@ for creating scalable web services.
 				\item Hardware Interface:
 					\begin{itemize}
 					\item Functionality:\\
-					The functionality of this system interface is the physical hardware that allows software operation. The hardware in this case is specifically the mobile devices on which the apps run and the computers the websites usually accessed through.\\
+					The functionality of this system interface is the physical hardware that allows software operation. The hardware in this case is specifically the desktop app(s) which allows the user to run the system.\\
 				\item How functionality achieves requirements:\\
 					This hardware will allow the achievement of the requirements by facilitating the operation of the application. The user will be able to press the physical device screen in order to use the search capabilities and other features of the application. The networking hardware of the components such as the Wireless Fidelity infrastructure or LAN connections between the devices which will allow for communication to the system server.
 				\end{itemize}
