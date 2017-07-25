@@ -1,6 +1,16 @@
 
 Architectures:
-  Service Oriented-
+  Service Oriented- This architecture would work well for our project as our project fits within to the 
+                    four properties of Service Oriented Architecture. 
+                    Namely :It logically represents a business activity with a specified outcome.
+                            It is self-contained.
+                            It is a black box for its consumers.
+                            It may consist of other underlying services.
+                            
+                    Based on these properties it is easy to see how the services for our project are provided to other 
+                    components. A service is a discrete unit of functionality that can be accessed remotely and 
+                    acted upon and updated independently.
+                    
   
   Client Server-
   
