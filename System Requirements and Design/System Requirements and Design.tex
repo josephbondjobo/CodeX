@@ -112,76 +112,67 @@ for creating scalable web services.
 				\item Functionality:\\
 					The functionality of the user interface is to allow the user to interact with the system. Through this aspect of the system the user can perform all the functions necessary to use the smart search of the system. Through this, the user is able to specify the search criteria to be used by the system.\\
 				\item How functionality achieves requirements:\\	
-					The user interface allows the functionality of the application to meet the requirements. The user is able to search for any product based on any value they enter in. The user is able to view displayed information of products, that is based closely on keywords and values or any thing resembling the name. \\
+					The user interface allows the functionality of the application to meet the requirements. The user is able to search for any product based on any value they enter in, such as the product name or product ID. The user is able to view displayed information of products, that is based closely on keywords and values or any thing resembling the name. \\
 					\end{itemize}
 				\item Hardware Interface:
 					\begin{itemize}
 					\item Functionality:\\
-					The functionality of this system interface is the physical hardware that allows software operation. The hardware in this case is specifically the desktop app(s) which allows the user to run the system.\\
+					The functionality of this system interface is the physical hardware that allows software operation. The hardware in this case is specifically the desktop which allows the user to run the system.\\
 				\item How functionality achieves requirements:\\
-					This hardware will allow the achievement of the requirements by facilitating the operation of the application. The user will be able to press the physical device screen in order to use the search capabilities and other features of the application. The networking hardware of the components such as the Wireless Fidelity infrastructure or LAN connections between the devices which will allow for communication to the system server.
+					This hardware will allow the achievement of the requirements by facilitating the operation of the application. The networking hardware of the components such as the Wireless Fidelity infrastructure or LAN connections between the devices which will allow for communication to the system server.
 				\end{itemize}
 				\item Software Interface:
 					\begin{itemize}
 					\item Functionality:\\
-						The functionality of the software interface is to facilitate the communication between the hardware infrastructure of the devices running the application front-end and Reroute Server. An example of this would be the operating system of the device in use. The operating system would allow the application to make use of the networking infrastructure and communicate the necessary information to the application via RESTful calls. This would enable the device to communicate with the server and perform the necessary requests.
+						The functionality of the software interface is to facilitate the communication between the hardware infrastructure of the device(s) running the application's front-end and the Reroute Server. An example of this would be the operating system of the device in use. The operating system would allow the application to make use of the networking infrastructure and communicate the necessary information to the application via RESTful calls. This would enable the device to communicate with the server and perform the necessary requests.
 \\
 					\item How functionality achieves requirements :\\
-This would allow the achievement of the requirements as the communication of the application to the system server is vital to the operation of the Smart Search. By allowing communication over WI-Fi the user is able to comunicate to the server from any location  or just stick to older and more familar devices such as computers, fulfilling the requirement .
+This would allow the achievement of the requirements, as the communication of the application to the system server is vital to the operation of the Smart Search. By allowing communication over WI-Fi, the user is able to communicate to the server from any location  or just stick to older and more familar devices such as computers, fulfilling the requirement.
 					\end{itemize}
 			\end{enumerate} 
 }
 
 		
             \subsubsection{User Interface}
-	    {All users will be able use to the Smart Search system from their device when the application is launched.
+	    All users will be able use the Smart Search system from their desktop devices when the application is launched.
 For the account user interface, the registered users will be able to login to their account, using their account information.
 \\\\
-}
-
-\subsubsection{Hardware Interface}
-		{
-The actual Wi-Fi interface between the mobile device/computer and Wi-Fi will be abstracted by the phone and will be managed by the actual underlying operating system on the phone. On a computer the LAN interface may also be abstracted by the computer and will be managed by the actual underlying operating system on the computer if a wired connection is to be used.}
-            \subsubsection{Software Interface}
-           {
-	   The software consists of the basic client-server system. The customers will interact with the client side of the system. There they will search for products, place orders, and manage their accounts. The client will pass the customer's requests to the server who performs the needed dataretrieval and interaction. The server will, if data is needed, send the needed service request to the database system. The database system will perform the request and return the requested data. The client and server systems will be seperate from the database system and will only use it as a plug-in. Keeping the three seperate will minimize the damage of errors and ease maintanance. The server will need to be able to handle multiple requests at the same time, it will need to be multi-threaded.  Also, keeping the database system seperate from the rest of the system allows the developers to easily change to a new or better database service.}
-
 	    \subsubsection{Communications Interface}
 	 \begin{itemize}
 	    \item Users using the web will use HTTP/HTTPS protocol.
-	    \item REST calls from the differrent platform to the server API.
-	    \item Cloud-based server running the database
+	    \item RESTful calls from the differrent platform to the server API.
+	    \item Cloud-based server running the database.
 	    \end{itemize}
             \subsubsection{Memory}
-	    {The desktop application will use a minimum amount of space of roughly 300MB.  The size could dramtically increase due to caching and storage of tof data locally. The size will also depend solely on caching of a lot of data. \\
-Primary memory(RAM) will use 50MB on average, based on how long the application is being used.}
+	    {The desktop application will use a minimum amount of space of roughly 300MB.\\
+		Primary memory(RAM) will use 50MB on average, based on how long the application is being used.}
+		
             \subsubsection{Operations}
 
             	{The user will require a series of usual and special case operations to be fulfilled by the system. The user will use the system in normal case operations that comprise of searching on any of the different properties of a product. On a usual case, the user will search for a product based on the name of the product of interest.\\\\
             	The system will provide a user the option to either save their data, such as variations of product names, locally on the device or remotely on the server.}
+		
            \subsubsection{Sit Adaption Requirements}
         (to be completed)
-		\subsection{Product Functions} {The main function of the Smart Search will be to retrieve product information based on the values given to the user. The basic functions will include:  }
+		\subsection{Product Functions} {The main function of the Smart Search will be to retrieve product information based on the values given to the system. The basic functions will include:  }
 	\begin{itemize}
-  		\item A search based on a specific property of a product such as the name.
+  		\item A search based on a specific property of a product such as the name or ID.
 	\end{itemize}
-    	\subsection{User Characteristics}  
-		{ 
 	
-{The general user will use the system to retrieve product information. They will require minimal skills in order to utilise the application, including the ability to connect to the Wi-Fi and use it. The general user will have restricted usage of the in-app game and certain privileges that require a user profile. They will not require any additional expertise or education to function the application.\\}
+    	\subsection{User Characteristics}  
+
+{The general user will use the system to retrieve product information. They will require minimal skills in order to utilise the application, including the ability to connect to the Wi-Fi and use it. They will require background knowledge/education in the medical or pharmaceutical field to use the application.\\}
+
     	\subsection{Constraints}
+	The system will
 	\begin{itemize}
-		\item The sytem will make use of the clients existing database to populate the new database.
-		\item The system will only use the data contained in the clients existing database.
-		\item The system will be avialable 99 percent of the time in a 24/7 period.
-		\item The system will learn and evolve from user input.
-		\item The system will be completed within the given time constraints.
-		\item The system will conform to the clients requirements.
+		\item only use the data contained in the client's existing database.
+		\item learn and evolve from user input (Machine learning).
 		
 	\end{itemize}
 	
     	\subsection{Assumptions and Dependencies}
-to be completed
+(to be completed)
 
 	\newpage
 		
