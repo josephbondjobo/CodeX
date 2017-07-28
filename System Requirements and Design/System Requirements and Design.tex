@@ -219,6 +219,7 @@ For the account user interface, the registered users will be able to login to th
 		\item Server(s): are powerful computers which are used to process the client requests.
 		\item Client: is simply a computer connected on the network which is used to send request for some resources to the 	server.
 	\end{itemize}
+ 	\includegraphics[scale=0.5]{Client_Server_Architecture.png}\\
 	\begin{itemize}
 		\item Requirement of a client-server: It models work in a networked environment therefore the processing of an application distributed between the client and the server. 
 
@@ -246,6 +247,8 @@ An architectural pattern in software design in which system use cases are divide
 		\item Service components: The reusable components used to build the services, such as functional libraries.
 		\item Operational system: Contains data repository, technological platforms, etc.
 	\end{itemize}
+ 	\includegraphics[scale=0.5]{service_oriented architecture diagram.png}\\
+
 
 Not to be confused with an API, this architectural pattern provides an aggregated collection of service which implement the use cases of the system. The user or developer themselves can choose which of these available services to call on. This architectural pattern was chosen because it is built around the principles of decoupling modules. Service objects must be decoupled from one another and can be distributed on different machines and implemented using different technologies, but implement a single interface, and communicate with one another using well defined interfaces, either locally or over a network. This also lends itself well to system reliability and scalability. More than one system provider may be used, enabling the system to switch to another service provider should one fail, or instantiating more service providers if system load increases.
 
