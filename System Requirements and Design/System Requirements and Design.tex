@@ -213,17 +213,29 @@ For the account user interface, the registered users will be able to login to th
 	\end{itemize}
 	
 	\subsection{Architectural Patterns}
-	\subsubsection Client-Server Architectural Pattern:
+	\subsubsection{Client-Server Architectural Pattern:}
 	The client server architecture is a network technology in which each computer connected on the network is either a server or 	client.
 	\begin{itemize}
 		\item Server(s): are powerful computers which are used to process the client requests.
 		\item Client: is simply a computer connected on the network which is used to send request for some resources to the 	server.
 	\end{itemize}
 	\begin{itemize}
-		\item Requirement of a client-server: It models work in a networked environment therefore the processing of an 				application distributed between the client and the server. 
+		\item Requirement of a client-server: It models work in a networked environment therefore the processing of an application distributed between the client and the server. 
 
 		\item Function of client server: An interface/form is provided by the client to allow a user to request services of the 		user and to display the results the server returns.
 	\end{itemize}
+
+	\subsubsection{Representational State Transfer (REST) Architectural Pattern:}
+	REST is an architectural pattern for designing networked applications. Instead of using complex mechanisms such as SOAP to 	connect between machines or to make calls between machines, simple HTTP is used.
+
+The Uniform interfaces is combined of resource names and HTTP, GET, DELETE, POST, PUT.
+A REST service is:
+\begin{itemize}
+	\item Language-independent (C# can communicate to Java, etc.),
+	\item Can be used with firewalls,
+	\item Platform-independent (MAC, Windows, UNIX) and,
+	\item Standards-based (runs on top of HTTP)
+\end{itemize}
 
 	
 	\newpage
