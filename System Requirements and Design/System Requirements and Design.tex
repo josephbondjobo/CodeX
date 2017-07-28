@@ -83,7 +83,7 @@
 	The core of the system is a search engine which is enriched with functionality
 of performing some machine learning in order to retrieve the product in a master file found in a database running on the server through RESTful calls. The high level modules and their responsibilities are shown in the figure below. \\ \\
 
-	\includegraphics[scale=0.62]{scope1.jpg}
+	\includegraphics[scale=0.60]{scope1.jpg}
 	\subsection{Definitions, Acronyms, and Abbreviations} 
 
 	\begin{itemize} 
@@ -99,7 +99,7 @@ for creating scalable web services.
 	(To be completed)
 	
 	\subsection{Stakeholders}
-	The stakeholders of the syste includes the following
+	The stakeholders of the system include the following
 	\begin{itemize}
 	\item \textbf{The Client} is Diederik Mostert, Software Director of ReRoute Systems who proposed the project as a result of a challenge faced in the company, which is to search a product on master file with different combination used by each wholesaler.
 	\item \textbf{Users in Pharmaceutical space} They will use the system to retrieve information of the product they need.
@@ -109,6 +109,13 @@ for creating scalable web services.
 
 \section{Overall Description}
 
+\subsection{Techonlogies}{
+	The following are technologies used in this project:\\
+	\begin{itemize}
+		\item SOAP, ZIZO database, Reddis, Firebird, Java, WDSL (Web Service Definition Language), GlassFish, JUnit, XML, pathway
+	\end{itemize}
+}
+	
 \subsection{Product Perspective}
         \subsubsection{System Interface}{
 			\begin{enumerate} 
@@ -143,7 +150,7 @@ This would allow the achievement of the requirements, as the communication of th
             \subsubsection{User Interface}
 	    All users will be able use the Smart Search system from their desktop devices when the application is launched.
 For the account user interface, the registered users will be able to login to their account, using their account information.
-\\\\
+\\
 	    \subsubsection{Communications Interface}
 	 \begin{itemize}
 	    \item Users using the web will use HTTP/HTTPS protocol.
@@ -194,9 +201,9 @@ For the account user interface, the registered users will be able to login to th
 
 	\newpage
 	\section{Architecture Requirements}
-	This section discusses the requirements that surround the software infrastructure
+	This section discusses the requirements that surround the software infrastructure.
 
-	\subsection{Access channel requirements}
+	\subsection{Access Channel Requirements}
 		\subsubsection{Human Access Channels}
 	The human access element must allow for desktop web client which will allow the user to access the Smart Search.
 	This element will be based on the client side of the two-tier Client-Server architectural pattern.
@@ -213,20 +220,20 @@ For the account user interface, the registered users will be able to login to th
 	\end{itemize}
 	
 	\subsection{Architectural Patterns}
-	\subsubsection{Client-Server Architectural Pattern:}
+	\subsubsection{Client-Server Architectural Pattern}
 	The client server architecture is a network technology in which each computer connected on the network is either a server or 	client.
 	\begin{itemize}
 		\item Server(s): are powerful computers which are used to process the client requests.
 		\item Client: is simply a computer connected on the network which is used to send request for some resources to the 	server.
 	\end{itemize}
- 	\includegraphics[scale=0.5]{Client_Server_Architecture.png}\\
 	\begin{itemize}
 		\item Requirement of a client-server: It models work in a networked environment therefore the processing of an application distributed between the client and the server. 
 
 		\item Function of client server: An interface/form is provided by the client to allow a user to request services of the 		user and to display the results the server returns.
 	\end{itemize}
+ 	\includegraphics[scale=0.75]{Client_Server_Architecture.png}\\
 
-	\subsubsection{Representational State Transfer (REST) Architectural Pattern:}
+	\subsubsection{Representational State Transfer (REST) Architectural Pattern}
 	REST is an architectural pattern for designing networked applications. Instead of using complex mechanisms such as SOAP to 	connect between machines or to make calls between machines, simple HTTP is used.
 
 The Uniform interfaces is combined of resource names and HTTP, GET, DELETE, POST, PUT.
@@ -238,17 +245,16 @@ A REST service is:
 	\item Standards-based (runs on top of HTTP)
 \end{itemize}
 
-	\subsubsection{Services Orientated Architecture/ Microservices Architecture:}
+	\subsubsection{Services Orientated Architecture/ Microservices Architecture}
 An architectural pattern in software design in which system use cases are divided into one or more service operations, and these service operations are then implemented, either individually or combined with other service operations, by a reusable SOA service. The SOA architecture itself comprises five layers:
-	\begin{itemize}
+	\begin{enumerate}
 		\item Consumer interface: The GUI for end users accessing application services
 		\item Business process: The representation of system use cases
 		\item Services: The consolidated inventory of all available services.
 		\item Service components: The reusable components used to build the services, such as functional libraries.
 		\item Operational system: Contains data repository, technological platforms, etc.
-	\end{itemize}
- 	\includegraphics[scale=0.5]{service_oriented architecture diagram.png}\\
-
+	\end{enumerate}
+ 	\includegraphics[scale=0.5]{service_oriented_architecture_diagram.png}\\
 
 Not to be confused with an API, this architectural pattern provides an aggregated collection of service which implement the use cases of the system. The user or developer themselves can choose which of these available services to call on. This architectural pattern was chosen because it is built around the principles of decoupling modules. Service objects must be decoupled from one another and can be distributed on different machines and implemented using different technologies, but implement a single interface, and communicate with one another using well defined interfaces, either locally or over a network. This also lends itself well to system reliability and scalability. More than one system provider may be used, enabling the system to switch to another service provider should one fail, or instantiating more service providers if system load increases.
 
@@ -265,55 +271,56 @@ The smart search application being build will be designed to run on Desktop runn
 	\subsection{Requirements}
 	\subsubsection{Functional Requirements} 
 		\begin{itemize}
-		\item Fuzzy Search: This program must be able to locate and return products that are related to the searched term. It should be able to return the same product if various ways of writing the name is used.\\\\
+		\item Fuzzy Search: This program must be able to locate and return products that are related to the searched term. It should be able to return the same product if various ways of writing the name is used.
 	
-		\item Fast Run-time:\\\\
-			Because there are very large amounts of data to be searched, it is vital for the program to be very efficient.  Even though this could be a non-functional requirement, it is vital for this program to be as fast and efficient as possible.\\\\
+		\item Fast Run-time:\\
+			Because there are very large amounts of data to be searched, it is vital for the program to be very efficient.  Even though this could be a non-functional requirement, it is vital for this program to be as fast and efficient as possible.
 			
-		\item Machine Learning:\\\\
-			The ability to learn from a user's previous interaction and adapt to it will improve the system’s capability and ability greatly. This can be done by using the dictionary provided by the ZIZO database, for creating new links between products that appear seemingly unrelated.\\\\
+		\item Machine Learning:\\
+			The ability to learn from a user's previous interaction and adapt to it will improve the system’s capability and ability greatly. This can be done by using the dictionary provided by the ZIZO database, for creating new links between products that appear seemingly unrelated.\\
 	
-		\item Handle Concurrent Users:\\\\
-			This program will be used by many people, in many different fields simultaneously. It is therefore very important for it to be able to handle multiple users at the same time. This will be achieved by the Cloud based architecture.\\\\
+		\item Handle Concurrent Users:\\
+			This program will be used by many people, in many different fields simultaneously. It is therefore very important for it to be able to handle multiple users at the same time. This will be achieved by the Cloud based architecture.
 	
-		\item Scalability:\\\\
+		\item Scalability:\\
 			Since it is essential for this system to be efficient with large datasets as well as small datasets, scalability will be an essential functional requirement. The system’s ability to stay efficient with very large sets of data is an essential part to the system.
 		 \end{itemize}
 
 	\subsubsection{Non-Functional Requirements}
 		\begin{itemize}
-		\item Predictive Typing:\\\\
-			Predictive typing is when the program suggests a possible solution as the user is typing. This is often based on previous searches and most common searches. This will help improve the user experience. \\\\
+		\item Predictive Typing:\\
+			Predictive typing is when the program suggests a possible solution as the user is typing. This is often based on previous searches and most common searches. This will help improve the user experience. 
 		
-		\item Spell checker:\\\\
-			The program will check the spelling as the user is typing a product name to enhance the search. \\\\
-	
-		\item Roubstness:\\\\
+		\item Spell checker:\\
+			The program will check the spelling as the user is typing a product name to enhance the search. 
+
+		\item Roubstness:\\
 			The system will not be easily breakable as it will be error proof to a feasible extent, to avoid unnecessary fault and not wholly be affected by the hardware failures. The system should be able to recover quickly from such failures, or at least be able to hold up or return to a valid stage/state.
 			
 			
-		\item Reliability:\\\\
+		\item Reliability:\\
 			This product should be able to adapt to different users in various fields as well as to different habits, interfaces, environments and needs of users.  
 	
-		\item Storing and using search history:\\\\
-			Being able to store the search history will increase the user experience, help with predictive typing and improve the program's ability to learn and adapt.\\\\
+		\item Storing and using search history:\\
+			Being able to store the search history will increase the user experience, help with predictive typing and improve the program's ability to learn and adapt.\\
 		\end{itemize}
 
 	
 	\subsubsection{Use Case Prioritization} 
+		 \includegraphics[scale=0.62]{Diagrams/GeneralClass.png}\\
 		\begin{enumerate} 
 		\item \textbf{Critical} 
 			\begin{itemize} 
 				\item Login
-                 \item \textbf{User Interfaces}\\\\
+                 \item \textbf{User Interfaces}\\
 		 \includegraphics[scale=0.62]{login.png}\\
 				\item Search Product \\
 				\textbf{Pre-condition: } The user has to have been logged in successfully.  \\
 				\textbf{Post-condition: }  System returns possible matches, or search not found. \\
 				\textbf{Use case: }\\
  				\includegraphics[scale=0.35]{Diagrams/SearchUCdiagram2.jpg}
-				\item Logout
-				\includegraphics[scale=0.62]{Diagrams/logout.png}\\
+				\item Logout\\
+				\includegraphics[scale=0.5]{Diagrams/logout.png}\\
 			\end{itemize} 
 		\item \textbf{Important} 
 		\begin{itemize}
@@ -332,20 +339,19 @@ The smart search application being build will be designed to run on Desktop runn
 	\subsection{Performance Requirements}
 	The performance requirements of the smart search app. can be sub-divided into two components, of which are the following:
 	\begin{itemize}
-	\item Client Application:\\\\
-
+	\item Client Application:
 		\begin{itemize}
-		\item The software needs to be responsive and lightweight enough to run well on desktop.\\
-		\item During User search, the Smart Search system will need to perform in real time showing results as necessary.\\
+		\item The software needs to be responsive and lightweight enough to run well on desktop.
+		\item During User search, the Smart Search system will need to perform in real time showing results as necessary.
 		\item The data usage should be kept to a minimum as to not overload the whole system's Wi-Fi infrastructure being used for non-searching purposes.\\
 		\end{itemize}
 
-	\item Server Performance Requirements:\\\\
+	\item Server Performance Requirements:
 		\begin{itemize}
-		\item The system should be able to handle multiple users using the smart search.\\
-		\item The system has to be able run at a high speed, returning the results of a search immediately.\\
-		\item The system should be able to handle a capacity of requests made to the database to make efficient searches and matches. \\
-		\item The system should be able to return matches of a high probability of available data in the database on the cloud.\\
+		\item The system should be able to handle multiple users using the smart search.
+		\item The system has to be able run at a high speed, returning the results of a search immediately.
+		\item The system should be able to handle a capacity of requests made to the database to make efficient searches and matches. 
+		\item The system should be able to return matches of a high probability of available data in the database on the cloud.
 		\item The system will need to be able to concurrently handle smart searches across the board.
 		\end{itemize}
 	\end{itemize}
@@ -359,13 +365,9 @@ The smart search application being build will be designed to run on Desktop runn
 	The software system will have the following attributes:
 		\begin{itemize}
 		\item Availability: The system and its functions will be available to any registered user as long as there is an internet connection. 
-\\\\
 		\item Reliability: The system will provide results that are available on the database to match whenever a user performs a search/smart search.
-\\\\
 		\item Portability: The system will be able to function across a multiple interfaces. Therefore, it will be able to port to Android and iOS with ease at a later time. 
-\\\\
 		\item Maintainability: The application will be able to be extended easily with new functionality. There will also be a good test environment to reduce and make it easy to find system errors.  
-\\\\
 		\item Robustness: The system will be able to stand against errors made by users in the search, returning no results and error messages as a result.
 		\end{itemize}
         
