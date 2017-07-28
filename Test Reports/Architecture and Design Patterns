@@ -1,0 +1,38 @@
+
+Architectures:
+  Service Oriented- This architecture would work well for our project as our project fits within to the 
+                    four properties of Service Oriented Architecture. 
+                    Namely :It logically represents a business activity with a specified outcome.
+                            It is self-contained.
+                            It is a black box for its consumers.
+                            It may consist of other underlying services.
+                            
+                    Based on these properties it is easy to see how the services for our project are provided to other 
+                    components. A service is a discrete unit of functionality that can be accessed remotely and 
+                    acted upon and updated independently.
+                    
+  
+  Client Server- This architecure complements our project quite well as it is a network architecture where each computer or
+                 process is either a client or a server. In our case our database will act as our server and the requests being 
+                 made to the server will come from service requesters called clients. The server will share its resources with 
+                 the clients.
+  
+Design Patterns:
+  Composite- The Composite pattern could fit in with our project as the intent of a composite is to "compose" objects into 
+             tree structures to represent part-whole hierarchies. Implementing the composite pattern lets clients treat individual 
+             objects and compositions uniformly
+  
+  Strategy- This pattern could be extremely benificial to our project as it is a behavioural software design pattern that 
+            enables to select an algorithm at runtime. The properties of the strategy pattern can be applied to our search 
+            agorithms as well as our machine learning algorithms. 
+            Its properties are: Defines a family of algorithms.
+                                Encapsulates each algorithm.
+                                Makes the algorithms interchangeable within that family.
+            The essential requirement to implement the Strategy pattern is the ability to store a reference to some code in
+            a data structure and retrieve it
+  
+  Facade- This pattern could be a potential solution to our project as it is an object that provides a simplified interface 
+          to a larger body of code, such as a class library.The Facade design pattern is often used when a system is very 
+          complex or difficult to understand because the system has a large number of interdependent classes or its source
+          code is unavailable. This pattern hides the complexities of the larger system and provides a simpler interface
+          to the client.
