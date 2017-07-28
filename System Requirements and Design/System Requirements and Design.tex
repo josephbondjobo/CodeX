@@ -193,7 +193,19 @@ For the account user interface, the registered users will be able to login to th
 	The database will be updated regularly.
 
 	\newpage
+	\section{Architecture Requirements}
+	This section discusses the requirements that surround the software infrastructure
+
+	\subsection {Access channel requirements}
+		\subsubsection{Human Access Channels}
+	The human access element must allow for desktop web client which will allow the user to access the Smart Search.
+	This element will be based on the client side of the two-tier Client-Server architectural pattern.
+
+		\subsubsection{System Access Channels}
+	All system access will be made over a uniform interface which will assist in faster development time, ease of maintenance and 		lower overall cost associated with the system. The common interface that will be used will be a RESTful API. All client-side 		interaction will be done via the User Interface which will in turn use the RESTful API set of the system to accomplish the given 	task.
+
 	
+	\newpage
 	\section{Specific Requirements}
 This section gives a detailed description of the system requirements. It describes all the functional as well as the quality requirements of the system.
 
@@ -317,7 +329,6 @@ The smart search application being build will be designed to run on Desktop runn
 
 	\subsection{Software System Attributes}
 	The software system will have the following attributes:
-		
 		\begin{itemize}
 		\item Availability: The system and its functions will be available to any registered user as long as there is an internet connection. 
 \\\\
