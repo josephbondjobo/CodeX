@@ -206,10 +206,24 @@ For the account user interface, the registered users will be able to login to th
 	
 	\subsection{Architecture Constraints}
 	\begin{itemize}
-		\item Representational State Transfer (REST) will be used. It is an architectural style used to design networked applications, and depends on cacheable and stateless client-server and communications protocols, using the HTTP protocol in most cases. All four CRUD operations are used in REST.
+		\item Representational State Transfer (REST) will be used. It is an architectural style used to design networked 	applications, and depends on cacheable and stateless client-server and communications protocols, using the HTTP protocol in most cases. All four CRUD operations are used in REST.
 		\item Service Oriented Architecture (SOA). The concept of service is based on SOA. SOA makes it easier for software components on computers that are over a network to work together with no need to make changes to the underlying program itself. 
 		\item Client-Server Architecture will also be used. This architecture is a model which the server hosts, delivers and manages the resources and services to be consumed by the client. In this case, the database performs the above with the resources. A two-tier client-server architecture is in play.
 		\item Unit Testing to automate the following tasks: Compilation of Java code, running test cases and generating product documentation.
+	\end{itemize}
+	
+	\subsection{Architectural Patterns}
+	\subsubsection Client-Server Architectural Pattern:
+	The client server architecture is a network technology in which each computer connected on the network is either a server or 	client.
+	\begin{itemize}
+		\item Server(s): are powerful computers which are used to process the client requests.
+		\item Client: is simply a computer connected on the network which is used to send request for some resources to the 	server.
+	\end{itemize}
+	\begin{itemize}
+		\item Requirement of a client-server: It models work in a networked environment therefore the processing of an 				application distributed between the client and the server. 
+
+		\item Function of client server: An interface/form is provided by the client to allow a user to request services of the 		user and to display the results the server returns.
+	\end{itemize}
 
 	
 	\newpage
