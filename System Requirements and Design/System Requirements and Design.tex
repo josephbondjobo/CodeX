@@ -196,14 +196,17 @@ For the account user interface, the registered users will be able to login to th
 	\section{Architecture Requirements}
 	This section discusses the requirements that surround the software infrastructure
 
-	\subsection {Access channel requirements}
+	\subsection{Access channel requirements}
 		\subsubsection{Human Access Channels}
 	The human access element must allow for desktop web client which will allow the user to access the Smart Search.
 	This element will be based on the client side of the two-tier Client-Server architectural pattern.
 
 		\subsubsection{System Access Channels}
 	All system access will be made over a uniform interface which will assist in faster development time, ease of maintenance and 		lower overall cost associated with the system. The common interface that will be used will be a RESTful API. All client-side 		interaction will be done via the User Interface which will in turn use the RESTful API set of the system to accomplish the given 	task.
-
+	
+	\subsection{Architecture Constraints}
+	\begin{itemize}
+		\item Representational State Transfer (REST) will be used. It is an architectural style used to design networked applications, and depends on cacheable and stateless client-server and communications protocols, using the HTTP protocol in most cases. All four CRUD operations are used in REST.
 	
 	\newpage
 	\section{Specific Requirements}
@@ -217,8 +220,7 @@ The smart search application being build will be designed to run on Desktop runn
 	\subsection{Requirements}
 	\subsubsection{Functional Requirements} 
 		\begin{itemize}
-		\item Fuzzy Search:\\\\
-			This program must be able to locate and return products that are related to the searched term. It should be able to return the same product if various ways of writing the name is used.\\\\
+		\item Fuzzy Search: This program must be able to locate and return products that are related to the searched term. It should be able to return the same product if various ways of writing the name is used.\\\\
 	
 		\item Fast Run-time:\\\\
 			Because there are very large amounts of data to be searched, it is vital for the program to be very efficient.  Even though this could be a non-functional requirement, it is vital for this program to be as fast and efficient as possible.\\\\
