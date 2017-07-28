@@ -237,6 +237,18 @@ A REST service is:
 	\item Standards-based (runs on top of HTTP)
 \end{itemize}
 
+	\subsubsection{Services Orientated Architecture/ Microservices Architecture:}
+An architectural pattern in software design in which system use cases are divided into one or more service operations, and these service operations are then implemented, either individually or combined with other service operations, by a reusable SOA service. The SOA architecture itself comprises five layers:
+	\begin{itemize}
+		\item Consumer interface: The GUI for end users accessing application services
+		\item Business process: The representation of system use cases
+		\item Services: The consolidated inventory of all available services.
+		\item Service components: The reusable components used to build the services, such as functional libraries.
+		\item Operational system: Contains data repository, technological platforms, etc.
+	\end{itemize}
+
+Not to be confused with an API, this architectural pattern provides an aggregated collection of service which implement the use cases of the system. The user or developer themselves can choose which of these available services to call on. This architectural pattern was chosen because it is built around the principles of decoupling modules. Service objects must be decoupled from one another and can be distributed on different machines and implemented using different technologies, but implement a single interface, and communicate with one another using well defined interfaces, either locally or over a network. This also lends itself well to system reliability and scalability. More than one system provider may be used, enabling the system to switch to another service provider should one fail, or instantiating more service providers if system load increases.
+
 	
 	\newpage
 	\section{Specific Requirements}
