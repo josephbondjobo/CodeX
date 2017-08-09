@@ -112,7 +112,16 @@ for creating scalable web services.
 \subsection{Techonlogies}{
 	The following are technologies used in this project:\\
 	\begin{itemize}
-		\item SOAP, ZIZO database, Reddis, Firebird, Java, WDSL (Web Service Definition Language), GlassFish, JUnit, XML, pathway
+		\item SOAP
+		\item ZIZO database
+		\item Reddis
+		\item Firebird
+		\item WDSL (Web Service Definition Language)
+		\item GlassFish
+		\item JUnit
+		\item JMeter
+		\item XML
+		\item Pathway
 	\end{itemize}
 }
 	
@@ -122,7 +131,7 @@ for creating scalable web services.
 				\item User Interface:
 					\begin{itemize}
 				\item Functionality:\\
-					The functionality of the user interface is to allow the user to interact with the system. Through this aspect of the system the user can perform all the functions necessary to use the smart search of the system. Through this, the user is able to specify the search criteria to be used by the system.\\
+					The functionality of the user interface is to allow the user to interact with the system. Through this aspect of the system the user can perform all the functions necessary to use the Smart Search of the system. Through this, the user is able to specify the search criteria to be used by the system.\\
 				\item How functionality achieves requirements:\\	
 					The user interface allows the functionality of the application to meet the requirements. The user is able to search for any product based on any value they enter in, such as the product name or product ID. The user is able to view displayed information of products, that is based closely on keywords and values or any thing resembling the name. \\
 					\end{itemize}
@@ -141,20 +150,20 @@ for creating scalable web services.
 						The functionality of the software interface is to facilitate the communication between the hardware infrastructure of the device(s) running the application's front-end and the Reroute Server. An example of this would be the operating system of the device in use. The operating system would allow the application to make use of the networking infrastructure and communicate the necessary information to the application via RESTful calls. This would enable the device to communicate with the server and perform the necessary requests.\\
 
 					\item How functionality achieves requirements :\\
-This would allow the achievement of the requirements, as the communication of the application to the system server is vital to the operation of the Smart Search. By allowing communication over WI-Fi, the user is able to communicate to the server from any location  or just stick to older and more familar devices such as computers, fulfilling the requirement.
+The above functionality would allow the achievement of the requirements, as the communication of the application with the system server is vital to the operation of the Smart Search. By allowing communication over WI-Fi, the user is able to communicate with the server from any location, or just stick to older and more familar devices such as desktop computers, fulfilling the requirement.
 					\end{itemize}
 			\end{enumerate} 
 }
 
 		
             \subsubsection{User Interface}
-	    All users will be able use the Smart Search system from their desktop devices when the application is launched.
+	    All users will be able to use the Smart Search system from their desktop devices when the application is launched.
 For the account user interface, the registered users will be able to login to their account, using their account information.
 \\
 	    \subsubsection{Communications Interface}
 	 \begin{itemize}
 	    \item Users using the web will use HTTP/HTTPS protocol.
-	    \item RESTful calls from the differrent platform to the server API.
+	    \item RESTful calls from the differrent platforms to the server API.
 	    \item Cloud-based server running the database.
 	    \end{itemize}
 	    
@@ -164,15 +173,17 @@ For the account user interface, the registered users will be able to login to th
 		
             \subsubsection{Operations}
 
-            	{The user will require a series of usual and special case operations to be fulfilled by the system. The user will use the system in normal case operations that comprise of searching on any of the different properties of a product. On a usual case, the user will search for a product based on the name of the product of interest.\\\\
+            	{A series of operations will be required to be fulfilled by the system. The user will use the system in cases that comprise of searching any of the different properties of a product. The user may also search for a product based on the name of the product of interest.\\\\
             	The system will provide a user the option to either save their data, such as variations of product names, locally on the device or remotely on the server.}
 		
            \subsubsection{Sit Adaption Requirements}
         (to be completed)
 
-		\subsection{Product Functions} {The main function of the Smart Search will be to retrieve product information based on the values given to the system. The basic functions will include:  }
+		\subsection{Product Functions} {The main function of the Smart Search will be to retrieve product information based on the values given to the system. The functions of the system will include:  }
 	\begin{itemize}
   		\item A search based on a specific property of a product such as the name or ID.
+		\item The use of a dictionary to link related words, thus enhancing the search.
+		\item The use of AI providing suggestions to the user of possible related words to be added to the dictionary.
 	\end{itemize}
 	
     	\subsection{User Characteristics}  
@@ -180,19 +191,19 @@ For the account user interface, the registered users will be able to login to th
 {The general user will use the system to retrieve product information. They will require minimal skills in order to utilise the application, including the ability to connect to the Wi-Fi and use it. They will require background knowledge/education in the medical or pharmaceutical field to use the application.\\}
 
     	\subsection{Constraints}
-	The system will
+	The system will:
 	\begin{itemize}
 		\item only use the data contained in the client's existing database.
-		\item learn and evolve from user input (Machine learning).
-	The system is subjected to working with an Internet Connection due to the linkage with the cloud. Without this in place, the system will not function.	
+		\item learn and evolve from user input (Machine Learning).
+	The system is subjected to working with an internet connection due to the linkage with the cloud. Without this in place, the system will not function.	
 		
 	\end{itemize}
 	
     	\subsection{Assumptions and Dependencies}
-	Users will	
+	Users will:	
 	\begin{itemize}
 	 
-		\item have some form of pharmaceutical knowledge.
+		\item have some form of pharmaceutical background knowledge.
 		\item have basic computer skills.
 		\item be connected to an internet connection.
 	\end{itemize}
@@ -205,36 +216,27 @@ For the account user interface, the registered users will be able to login to th
 
 	\subsection{Access Channel Requirements}
 		\subsubsection{Human Access Channels}
-	The human access element must allow for desktop web client which will allow the user to access the Smart Search.
-	This element will be based on the client side of the two-tier Client-Server architectural pattern.
+	This element must allow for desktop applications to give the user access to the Smart Search.
+	It will also be based on the client side of the two-tier Client-Server architectural pattern.
 
 		\subsubsection{System Access Channels}
 	All system access will be made over a uniform interface which will assist in faster development time, ease of maintenance and 		lower overall cost associated with the system. The common interface that will be used will be a RESTful API. All client-side 		interaction will be done via the User Interface which will in turn use the RESTful API set of the system to accomplish the given 	task.
 	
 	\subsection{Architecture Constraints}
 	\begin{itemize}
-		\item Representational State Transfer (REST) will be used. It is an architectural style used to design networked 	applications, and depends on cacheable and stateless client-server and communications protocols, using the HTTP protocol in most cases. All four CRUD operations are used in REST.
-		\item Service Oriented Architecture (SOA). The concept of service is based on SOA. SOA makes it easier for software components on computers that are over a network to work together with no need to make changes to the underlying program itself. 
-		\item Client-Server Architecture will also be used. This architecture is a model which the server hosts, delivers and manages the resources and services to be consumed by the client. In this case, the database performs the above with the resources. A two-tier client-server architecture is in play.
+		\item Representational State Transfer (REST) will be used. It is an architectural style used to design networked 	applications, and depends on cacheable and stateless client-server and communications protocols, using the HTTP protocol in most cases. 
+		\item Service Oriented Architecture (SOA). The concept of service is based on SOA. It makes it easier for software components on computers that are over a network to work together with no need to make changes to the underlying program itself. 
+		\item Cloud-based Architecture will also be used. This architecture is a model which consist of a front end platform (client), back end platform (servers), a cloud based delivery, and a network (Internet). Combined, these components make up cloud computing architecture.
 		\item Unit Testing to automate the following tasks: Compilation of Java code, running test cases and generating product documentation.
 	\end{itemize}
 	
 	\subsection{Architectural Patterns}
-	\subsubsection{Client-Server Architectural Pattern}
-	The client server architecture is a network technology in which each computer connected on the network is either a server or 	client.
-	\begin{itemize}
-		\item Server(s): are powerful computers which are used to process the client requests.
-		\item Client: is simply a computer connected on the network which is used to send request for some resources to the 	server.
-	\end{itemize}
-	\begin{itemize}
-		\item Requirement of a client-server: It models work in a networked environment therefore the processing of an application distributed between the client and the server. 
-
-		\item Function of client server: An interface/form is provided by the client to allow a user to request services of the 		user and to display the results the server returns.
-	\end{itemize}
- 	\includegraphics[scale=0.75]{Client_Server_Architecture.png}\\
+	\subsubsection{Cloud-based Architectural Pattern}
+(to be completed)\\
+	
 
 	\subsubsection{Representational State Transfer (REST) Architectural Pattern}
-	REST is an architectural pattern for designing networked applications. Instead of using complex mechanisms such as SOAP to 	connect between machines or to make calls between machines, simple HTTP is used.
+	REST is an architectural pattern for designing networked applications.
 
 The Uniform interfaces is combined of resource names and HTTP, GET, DELETE, POST, PUT.
 A REST service is:
@@ -246,7 +248,7 @@ A REST service is:
 \end{itemize}
 
 	\subsubsection{Services Orientated Architecture/ Microservices Architecture}
-An architectural pattern in software design in which system use cases are divided into one or more service operations, and these service operations are then implemented, either individually or combined with other service operations, by a reusable SOA service. The SOA architecture itself comprises five layers:
+An architectural pattern in software design in which system use cases are divided into one or more service operations, and these service operations are then implemented, either individually or combined with other service operations, by a reusable SOA service. The SOA architecture itself comprises of five layers:
 	\begin{enumerate}
 		\item Consumer interface: The GUI for end users accessing application services
 		\item Business process: The representation of system use cases
