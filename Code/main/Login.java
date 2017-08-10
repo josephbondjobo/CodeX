@@ -181,6 +181,7 @@ public class Login {
 				frmLogin.dispose();
 			}
 		});
+		/**Validating credentiels*/
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(edtUsername.getText().equals("") && edtPassword.getText().equals("")){
