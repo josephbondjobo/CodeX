@@ -110,7 +110,7 @@ for creating scalable web services.
 \section{Overall Description}
 
 \subsection{Techonlogies}{
-	The following are technologies used in this project:\\
+	The following are technologies used in this project:
 	\begin{itemize}
 		\item SOAP
 		\item ZIZO database
@@ -202,7 +202,6 @@ For the account user interface, the registered users will be able to login to th
     	\subsection{Assumptions and Dependencies}
 	Users will:	
 	\begin{itemize}
-	 
 		\item have some form of pharmaceutical background knowledge.
 		\item have basic computer skills.
 		\item be connected to an internet connection.
@@ -226,14 +225,19 @@ For the account user interface, the registered users will be able to login to th
 	\begin{itemize}
 		\item Representational State Transfer (REST) will be used. It is an architectural style used to design networked 	applications, and depends on cacheable and stateless client-server and communications protocols, using the HTTP protocol in most cases. 
 		\item Service Oriented Architecture (SOA). The concept of service is based on SOA. It makes it easier for software components on computers that are over a network to work together with no need to make changes to the underlying program itself. 
-		\item Cloud-based Architecture will also be used. This architecture is a model which consist of a front end platform (client), back end platform (servers), a cloud based delivery, and a network (Internet). Combined, these components make up cloud computing architecture.
+		\item Cloud-based Architecture will also be used. This architecture is a model which consists of a front end platform (client), back end platform (servers), a cloud based delivery, and a network (Internet). Combined, these components make up cloud computing architecture.
 		\item Unit Testing to automate the following tasks: Compilation of Java code, running test cases and generating product documentation.
 	\end{itemize}
 	
 	\subsection{Architectural Patterns}
 	\subsubsection{Cloud-based Architectural Pattern}
-(to be completed)\\
+	This architecture consists of front-end, back-end, cloud-based delivery, and a network.
+	Our system is combined with the client as front-end, the database and servers, and the network. 
+	Regarding the delivery platform, Reroute makes use of the Software as a Service(SaaS) service-model. This model involves
+	the cloud provider installing and maintaining software in the cloud and users running the software from their cloud clients
+	over the Internet. It is scalable, which yields a major plus as our system is required to return results at a very high rate.\\
 	
+	\includegraphics[scale=0.5]{Cloud-based Architecural Diagram.jpg}\\
 
 	\subsubsection{Representational State Transfer (REST) Architectural Pattern}
 	REST is an architectural pattern for designing networked applications.
@@ -309,7 +313,7 @@ The smart search application being build will be designed to run on Desktop runn
 
 	
 	\subsubsection{Use Case Prioritization} 
-		 \includegraphics[scale=0.62]{Diagrams/GeneralClass.png}\\
+		 \includegraphics[scale=0.62]{Diagrams/ClassDiagramUpdatedWithDesign.png}\\
 		\begin{enumerate} 
 		\item \textbf{Critical} 
 		\begin{itemize}
@@ -319,95 +323,97 @@ The smart search application being build will be designed to run on Desktop runn
 		\item Edit Data
 		\item Search Data
 		\end{itemize}
-			\begin{itemize} 
-				\item Login
-                 \item \textbf{User Interfaces}\\
-		 \includegraphics[scale=0.62]{login.png}\\
+		
+		\begin{itemize} 
+			\item Login
+			 \includegraphics[scale=0.62]{Login Use Case.png}\\
 		 
-				\item Search Product \\
-				\textbf{Pre-condition: } The user has to have been logged in successfully.  \\
-				\textbf{Post-condition: }  System returns possible matches, or search not found. \\
-				\textbf{Use case: }\\
- 				\includegraphics[scale=0.35]{Diagrams/SearchUCdiagram2.jpg}
-				
-				\item Logout\\
-				\includegraphics[scale=0.5]{Diagrams/logout.png}\\
-				
-				\item{Register User}
-					\begin{itemize}
-						\item Description:
-					This use case will be used by the customers to register themselves as users of the system. This is required before they are allowed to login. 
-					This will be created a user of the system.
+			\item Search Product \\
+			\begin{itemize}
+				\item Pre-condition(s): The user has to have been logged in successfully.  \\
+				\item Post-condition(s): System returns possible matches, or search not found. \\
+ 				\includegraphics[scale=0.35]{Diagrams/Search Use Case.png}
+			\end{itemize}
+			
+			\item Logout\\
+			\includegraphics[scale=0.5]{Diagrams/logout.png}\\
 
-						\item Pre-Conditions:
-						\begin{enumerate}
-							\item The user doesn't exist on the system.
-							\item The user has provided all the required details.
-							\item All the details provided by the user a valid. 
-						\end{enumerate}
-						\item Post-Conditions
-						\begin{enumerate}
-							\item The user will be created as a user of the system.
-						\end{enumerate}
-		 \includegraphics[scale=0.62]{Diagrams/RegisterUseCase.png}\\
-					\end{itemize}
-
-
-					\item View/Edit User
-					\begin{itemize}
-						\item Description
-							\begin{enumerate}
-								\item This case will be used by the customers to view and edit their profile details.
-							\end{enumerate}
-						\item Pre-Condition:
-							\begin{enumerate}	
-								\item The customer must be logged in.
-								\item All the edited details need to be valid.
-							\end{enumerate}
-						\item Post-Condition:
-							\begin{enumerate}
-								\item The customer's details will be edited.
-								\item The customer must be able to see his/her details.
-								\item The database keeping the customer's details has to be updated.
-							\end{enumerate}
-		 \includegraphics[scale=0.62]{Diagrams/View_EditUseCase.png}\\
-					\end{itemize}
-				\item Manipulate Data to the database
+			\item{Register User}
 				\begin{itemize}
-					\item Description
-						\begin{enumerate}
-							\item The develop/administative user will use this use case to add, remove and edit data on the database. 
-						\end{enumerate}
-					\item Pre-Condition:
-						\begin{enumerate}	
-							\item The administative user needs to be logged in to the system. 
-						\end{enumerate}
-					\item Post-Condition:
-						\begin{enumerate}
-							\item The database will be updated with the new information. 
-						\end{enumerate}
-			 \includegraphics[scale=0.62]{Diagrams/ManipulateDatabaseUseCase.png}\\
+					\item Description:
+				This use case will be used by the customers to register themselves as users of the system. This is required before they are allowed to login. 
+				This will be created a user of the system.
 
+					\item Pre-Conditions:
+					\begin{enumerate}
+						\item The user doesn't exist on the system.
+						\item The user has provided all the required details.
+						\item All the details provided by the user a valid. 
+					\end{enumerate}
+					\item Post-Conditions
+					\begin{enumerate}
+						\item The user will be created as a user of the system.
+					\end{enumerate}
+	 \includegraphics[scale=0.62]{Diagrams/RegisterUseCase.png}\\
 				\end{itemize}
-				\item Manipulate Data in Dictionary
+
+
+				\item View/Edit User
 				\begin{itemize}
 					\item Description
 						\begin{enumerate}
-							\item The administative users will use this use case to add data to the dictionary. This will improve the accuracy of the search function.
+							\item This case will be used by the customers to view and edit their profile details.
 						\end{enumerate}
 					\item Pre-Condition:
 						\begin{enumerate}	
-							\item The user is logged in as adminitrative user.
-							\item The linked words must be identified as a match.
-							\item The user must be familier with the format of the dictionary.
+							\item The customer must be logged in.
+							\item All the edited details need to be valid.
 						\end{enumerate}
 					\item Post-Condition:
 						\begin{enumerate}
-							\item New words are linked in the dictionary.
-							\item The search will be more accurate.
+							\item The customer's details will be edited.
+							\item The customer must be able to see his/her details.
+							\item The database keeping the customer's details has to be updated.
 						\end{enumerate}
-			 \includegraphics[scale=0.62]{Diagrams/ManipulateDictionaryUseCase.png}\\
-			\end{itemize} 
+	 \includegraphics[scale=0.62]{Diagrams/View_EditUseCase.png}\\
+				\end{itemize}
+			\item Manipulate Data to the database
+			\begin{itemize}
+				\item Description
+					\begin{enumerate}
+						\item The develop/administative user will use this use case to add, remove and edit data on the database. 
+					\end{enumerate}
+				\item Pre-Condition:
+					\begin{enumerate}	
+						\item The administative user needs to be logged in to the system. 
+					\end{enumerate}
+				\item Post-Condition:
+					\begin{enumerate}
+						\item The database will be updated with the new information. 
+					\end{enumerate}
+		 \includegraphics[scale=0.62]{Diagrams/ManipulateDatabaseUseCase.png}\\
+
+			\end{itemize}
+			\item Manipulate Data in Dictionary
+			\begin{itemize}
+				\item Description
+					\begin{enumerate}
+						\item The administative users will use this use case to add data to the dictionary. This will improve the accuracy of the search function.
+					\end{enumerate}
+				\item Pre-Condition:
+					\begin{enumerate}	
+						\item The user is logged in as adminitrative user.
+						\item The linked words must be identified as a match.
+						\item The user must be familier with the format of the dictionary.
+					\end{enumerate}
+				\item Post-Condition:
+					\begin{enumerate}
+						\item New words are linked in the dictionary.
+						\item The search will be more accurate.
+					\end{enumerate}
+		 \includegraphics[scale=0.62]{Diagrams/ManipulateDictionaryUseCase.png}\\
+		\end{itemize} 
+		
 		\item \textbf{Important} 
 		\begin{itemize}
                 \item The application must search for the item the user enters for their desired search. 
@@ -428,8 +434,16 @@ The smart search application being build will be designed to run on Desktop runn
 		\end{itemize}
 \end{itemize}
 		\end{enumerate} 
-		
-		
+	
+	\subsection{Application Design}
+	\subsubsection {Activity Diagram}
+		 \includegraphics[scale=0.62]{Diagrams/ClassDiagramUpdatedWithDesign.png}\\
+		 
+	\subsubsection {Sequence Diagram}
+		 \includegraphics[scale=0.62]{Diagrams/ClassDiagramUpdatedWithDesign.png}\\
+	
+	\subsubsection {Deployment Diagram}
+		 \includegraphics[scale=0.62]{Diagrams/Deployment Diagram.png}\\
 		
 		
 	\subsection{Performance Requirements}
@@ -462,7 +476,7 @@ The smart search application being build will be designed to run on Desktop runn
 		\begin{itemize}
 		\item Availability: The system and its functions will be available to any registered user as long as there is an internet connection. 
 		\item Reliability: The system will provide results that are available on the database to match whenever a user performs a search/smart search.
-		\item Portability: The system will be able to function across a multiple interfaces. Therefore, it will be able to port to Android and iOS with ease at a later time. 
+		\item Portability: The system will be able to function across a multiple interfaces. Therefore, it will be able to port to Android and iOS with ease at a later time, if it is made available for mobile.   
 		\item Maintainability: The application will be able to be extended easily with new functionality. There will also be a good test environment to reduce and make it easy to find system errors.  
 		\item Robustness: The system will be able to stand against errors made by users in the search, returning no results and error messages as a result.
 		\end{itemize}
@@ -470,8 +484,7 @@ The smart search application being build will be designed to run on Desktop runn
 	\subsection{Other Requirements}
 
 \subsubsection{Quality requirements}
-The web interface should be accessible to most modern PCs with a modern browser.
-The RESTful API will be implemented using the HTTP protocol as a high-level protocol. HTTP was the choice because it is a widely spread and deployed protocol, allowing a lot of flexibility. 
+(to be completed)
 
 
 
