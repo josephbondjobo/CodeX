@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+\addtolength{\oddsidemargin}{-1.cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-2cm}
+\addtolength{\textheight}{3.5cm}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{pdflscape}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{rotating}
+\usepackage{graphicx}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+% define the title
+\author{CodeX}
+\title{CodeX Testing Report}
+
+\begin{document}
+	\setlength{\parskip}{6pt}
+	
+	% generates the Cover page
+	\input{cover.tex}
+	
+	\tableofcontents
+	
+	\newpage
+	
+	\section{Functional Requirements}
+	\subsection{Core Functionality}
+		Our tests for non-functional requirements can be found in Table 1. 
+	\subsubsection{Fuzzy Search:}
+
+	This program must be able to locate and return products that are related to the searched term. It should be able to return the same product if various ways of writing the name is used.\\
+	The two use cases tested was sending a single email and sending a batch of emails.
+	
+	Test Case:
+	\begin{itemize}
+      \item Null Value SOAP Search: 10
+      \item SOAP Serach: 10
+    \end{itemize}
+	\subsection{Innovations}
+	\subsubsection{Fast Run-time:}
+Because there are very large amounts of data to be searched, it is vital for the program to be very
+efficient. Even though this could be a non-functional requirement, it is vital for this program to be as fast
+and efficient as possible.	
+
+	Test Case:
+	\begin{itemize}	
+      \item TBD 
+    \end{itemize}
+	\subsubsection{Machine Learning:}
+	The ability to learn from a user's previous interaction and adapt to it will improve the systems capability and ability greatly. This can be done by 
+	using the dictionary provided by the ZIZO database, for creating new links between products that appear seemingly unrelated.
+	
+	Test Case:
+	\begin{itemize}
+      		\item TBD 
+	 \end{itemize}
+	
+	\subsubsection{Handle Concurrent Users:}
+This program will be used by many people, in many different elds simultaneously. It is therefore very important for it to be able to handle multiple users
+ at the same time. This will be achieved by the Cloud based architecture.	
+	Test Case:
+	\begin{itemize}
+        	\item TBD 
+       \end{itemize}
+
+	\subsubsection{Scalability:}
+	Since it is essential for this system to be efficient with large datasets as well as small datasets, scalability will be an essential functional requirement. The systems ability to stay efficient with very large sets of data is an essential part to the system.
+	
+	Test Case:
+	\begin{itemize}
+      	  	\item TBD 
+        \end{itemize}
+
+	\section{Non-Functional Requirements}	
+	\subsection{Predictive Typing:}
+Predictive typing is when the program suggests a possible solution as the user is typing. This is often based on previous searches and most common searches. This will help improve the user experience. \\
+    
+	Score: 0    
+    \subsection{Spell checker:}
+The program will check the spelling as the user is typing a product name to enhance the search.    \\
+
+	Score: 0    
+    \subsection{Roubstness:}
+The system will not be easily breakable as it will be error proof to a feasible extent, to avoid unnecessary fault and not wholly be affected by the hardware failures. The system should be able to recover quickly from such failures, or at least be able to hold up or return to a valid stage/state.\\
+    
+	Score: 0    
+    \subsection{Reliability:}
+	This product should be able to adapt to different users in various fields as well as to different habits, interfaces, environments and needs of users.\\
+
+	Score: 0    
+    \subsection{Storing and using search history:}
+	Being able to store the search history will increase the user experience, help with predictive typing and improve the program's ability to learn and adapt.\\
+
+	Score: 0    
+        
+        \newpage
+        
+	\begin{sidewaystable}
+        \centering
+        \caption{Test Details}
+        \label{Functional Testing}
+        \begin{tabular}{lllllrr}
+        \multicolumn{7}{c}{\textbf{Test Fuzzy Search:}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         	\\ \hline
+        \multicolumn{1}{|l|}{Test}   & \multicolumn{1}{l|}{Input} & \multicolumn{1}{l|}{Expected Result}& \multicolumn{1}{l|}{Actual Result}& \multicolumn{1}{l|}{Comment} & \multicolumn{1}{l|}{Score} & \multicolumn{1}{l|}{Weight} \\ \hline
+        \multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}SOAP Search \end{tabular}}
+        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Product Name: Panado
+					\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}27\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}27\end{tabular}}      
+	& \multicolumn{1}{l|}{}                                                                                                                                                                        
+	& \multicolumn{1}{r|}{10}    
+	& \multicolumn{1}{r|}{0.5}   
+	 \\ \hline
+        \multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Null SOAP Search \end{tabular}}
+        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Product Name: NULL
+					\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}0\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}0\end{tabular}}      
+	& \multicolumn{1}{l|}{}                                                                                                                                                                        
+	& \multicolumn{1}{r|}{8}    
+	& \multicolumn{1}{r|}{8}   
+	 \\ \hline
+        \end{tabular}
+    \end{sidewaystable}
+    
+	\begin{sidewaystable}
+	    \centering
+        \caption{Non-Functonal Requirements Tests}
+        \label{my-label}
+        \begin{tabular}{lllll}
+        \multicolumn{5}{c}{\textbf{Test Performance}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           \\ \hline
+        \end{tabular}
+	\end{sidewaystable}
+	
+\end{document}
