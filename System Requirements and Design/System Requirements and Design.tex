@@ -323,95 +323,97 @@ The smart search application being build will be designed to run on Desktop runn
 		\item Edit Data
 		\item Search Data
 		\end{itemize}
-			\begin{itemize} 
-				\item Login
-                 \item \textbf{User Interfaces}\\
-		 \includegraphics[scale=0.62]{Login Use Case.png}\\
+		
+		\begin{itemize} 
+			\item Login
+			 \includegraphics[scale=0.62]{Login Use Case.png}\\
 		 
-				\item Search Product \\
-				\textbf{Pre-condition: } The user has to have been logged in successfully.  \\
-				\textbf{Post-condition: }  System returns possible matches, or search not found. \\
-				\textbf{Use case: }\\
+			\item Search Product \\
+			\begin{itemize}
+				\item Pre-condition(s): The user has to have been logged in successfully.  \\
+				\item Post-condition(s): System returns possible matches, or search not found. \\
  				\includegraphics[scale=0.35]{Diagrams/Search Use Case.png}
-				
-				\item Logout\\
-				\includegraphics[scale=0.5]{Diagrams/logout.png}\\
-				
-				\item{Register User}
-					\begin{itemize}
-						\item Description:
-					This use case will be used by the customers to register themselves as users of the system. This is required before they are allowed to login. 
-					This will be created a user of the system.
+			\end{itemize}
+			
+			\item Logout\\
+			\includegraphics[scale=0.5]{Diagrams/logout.png}\\
 
-						\item Pre-Conditions:
-						\begin{enumerate}
-							\item The user doesn't exist on the system.
-							\item The user has provided all the required details.
-							\item All the details provided by the user a valid. 
-						\end{enumerate}
-						\item Post-Conditions
-						\begin{enumerate}
-							\item The user will be created as a user of the system.
-						\end{enumerate}
-		 \includegraphics[scale=0.62]{Diagrams/RegisterUseCase.png}\\
-					\end{itemize}
-
-
-					\item View/Edit User
-					\begin{itemize}
-						\item Description
-							\begin{enumerate}
-								\item This case will be used by the customers to view and edit their profile details.
-							\end{enumerate}
-						\item Pre-Condition:
-							\begin{enumerate}	
-								\item The customer must be logged in.
-								\item All the edited details need to be valid.
-							\end{enumerate}
-						\item Post-Condition:
-							\begin{enumerate}
-								\item The customer's details will be edited.
-								\item The customer must be able to see his/her details.
-								\item The database keeping the customer's details has to be updated.
-							\end{enumerate}
-		 \includegraphics[scale=0.62]{Diagrams/View_EditUseCase.png}\\
-					\end{itemize}
-				\item Manipulate Data to the database
+			\item{Register User}
 				\begin{itemize}
-					\item Description
-						\begin{enumerate}
-							\item The develop/administative user will use this use case to add, remove and edit data on the database. 
-						\end{enumerate}
-					\item Pre-Condition:
-						\begin{enumerate}	
-							\item The administative user needs to be logged in to the system. 
-						\end{enumerate}
-					\item Post-Condition:
-						\begin{enumerate}
-							\item The database will be updated with the new information. 
-						\end{enumerate}
-			 \includegraphics[scale=0.62]{Diagrams/ManipulateDatabaseUseCase.png}\\
+					\item Description:
+				This use case will be used by the customers to register themselves as users of the system. This is required before they are allowed to login. 
+				This will be created a user of the system.
 
+					\item Pre-Conditions:
+					\begin{enumerate}
+						\item The user doesn't exist on the system.
+						\item The user has provided all the required details.
+						\item All the details provided by the user a valid. 
+					\end{enumerate}
+					\item Post-Conditions
+					\begin{enumerate}
+						\item The user will be created as a user of the system.
+					\end{enumerate}
+	 \includegraphics[scale=0.62]{Diagrams/RegisterUseCase.png}\\
 				\end{itemize}
-				\item Manipulate Data in Dictionary
+
+
+				\item View/Edit User
 				\begin{itemize}
 					\item Description
 						\begin{enumerate}
-							\item The administative users will use this use case to add data to the dictionary. This will improve the accuracy of the search function.
+							\item This case will be used by the customers to view and edit their profile details.
 						\end{enumerate}
 					\item Pre-Condition:
 						\begin{enumerate}	
-							\item The user is logged in as adminitrative user.
-							\item The linked words must be identified as a match.
-							\item The user must be familier with the format of the dictionary.
+							\item The customer must be logged in.
+							\item All the edited details need to be valid.
 						\end{enumerate}
 					\item Post-Condition:
 						\begin{enumerate}
-							\item New words are linked in the dictionary.
-							\item The search will be more accurate.
+							\item The customer's details will be edited.
+							\item The customer must be able to see his/her details.
+							\item The database keeping the customer's details has to be updated.
 						\end{enumerate}
-			 \includegraphics[scale=0.62]{Diagrams/ManipulateDictionaryUseCase.png}\\
-			\end{itemize} 
+	 \includegraphics[scale=0.62]{Diagrams/View_EditUseCase.png}\\
+				\end{itemize}
+			\item Manipulate Data to the database
+			\begin{itemize}
+				\item Description
+					\begin{enumerate}
+						\item The develop/administative user will use this use case to add, remove and edit data on the database. 
+					\end{enumerate}
+				\item Pre-Condition:
+					\begin{enumerate}	
+						\item The administative user needs to be logged in to the system. 
+					\end{enumerate}
+				\item Post-Condition:
+					\begin{enumerate}
+						\item The database will be updated with the new information. 
+					\end{enumerate}
+		 \includegraphics[scale=0.62]{Diagrams/ManipulateDatabaseUseCase.png}\\
+
+			\end{itemize}
+			\item Manipulate Data in Dictionary
+			\begin{itemize}
+				\item Description
+					\begin{enumerate}
+						\item The administative users will use this use case to add data to the dictionary. This will improve the accuracy of the search function.
+					\end{enumerate}
+				\item Pre-Condition:
+					\begin{enumerate}	
+						\item The user is logged in as adminitrative user.
+						\item The linked words must be identified as a match.
+						\item The user must be familier with the format of the dictionary.
+					\end{enumerate}
+				\item Post-Condition:
+					\begin{enumerate}
+						\item New words are linked in the dictionary.
+						\item The search will be more accurate.
+					\end{enumerate}
+		 \includegraphics[scale=0.62]{Diagrams/ManipulateDictionaryUseCase.png}\\
+		\end{itemize} 
+		
 		\item \textbf{Important} 
 		\begin{itemize}
                 \item The application must search for the item the user enters for their desired search. 
