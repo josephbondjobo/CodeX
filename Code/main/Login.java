@@ -41,6 +41,7 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.SystemColor;
+import javax.swing.ImageIcon;
 
 public class Login {
 	public int colorDarkred = 0xDa1d2c;
@@ -227,6 +228,7 @@ public class Login {
 		panel_9.setBackground(Color.WHITE);
 
 		JButton btnLogin = new JButton("Login");
+		btnLogin.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\login.png"));
 		panel_9.add(btnLogin);
 		btnLogin.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		btnLogin.setBackground(SystemColor.activeCaptionBorder);
@@ -235,7 +237,8 @@ public class Login {
 		JLabel label_2 = new JLabel("                       ");
 		panel_9.add(label_2);
 
-		JButton btnExit = new JButton("  Exit  ");
+		JButton btnExit = new JButton("  Exit     ");
+		btnExit.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\logout.png"));
 		panel_9.add(btnExit);
 		btnExit.setBackground(SystemColor.activeCaptionBorder);
 		btnExit.setForeground(Color.WHITE);
