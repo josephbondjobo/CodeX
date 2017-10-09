@@ -100,8 +100,10 @@ and efficient as possible. THis is checked by comparing it to the previous syste
 	\begin{itemize}	
         \item Response time per search: 1 
          \end{itemize}
+         
+	\subsection{Benchmark Testing:}
 
-	\subsubsection{Handle Concurrent Users:}
+	\subsubsection{Handling Concurrent Users:}
 This program will be used by many people, in many different elds simultaneously. It is therefore very important for it to be able to handle multiple users
 at the same time. This will be achieved by the Cloud based architecture.	
 	Test Case:
@@ -129,9 +131,9 @@ The system will not be easily breakable as it will be error proof to a feasible 
 	Being able to store the search history will increase the user experience, help with predictive typing and improve the program's ability to learn and adapt.\\
 
 	Score: 0    
-        
+
         \newpage
-        
+
 	\begin{sidewaystable}
         \centering
         \caption{Test Details}
@@ -306,16 +308,61 @@ The system will not be easily breakable as it will be error proof to a feasible 
     
 	\begin{sidewaystable}
 	    \centering
-        \caption{Non-Functonal Requirements Tests}
+        \caption{Benchmark Testing}
         \label{my-label}
         \begin{tabular}{lllllrr}
-        \multicolumn{7}{c}{\textbf{Test Performance}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           \\ \hline
+        \multicolumn{7}{c}{\textbf{Test Performance (per 10000 Threads)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           \\ \hline
         \multicolumn{1}{|l|}{Test}   & \multicolumn{1}{l|}{Input} & \multicolumn{1}{l|}{Current System}& \multicolumn{1}{l|}{Our System}& \multicolumn{1}{l|}{Comment} & \multicolumn{1}{l|}{Score} & \multicolumn{1}{l|}{Weight} \\ \hline
-        \multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Response time per search\end{tabular}}
+        \multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Max Response:\end{tabular}}
         & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Product Name: Panado
 					\end{tabular}} 
-	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}0.58ms\end{tabular}} 
-	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}0.29ms\end{tabular}}      
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}12943ms\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}tba\end{tabular}}      
+	& \multicolumn{1}{l|}{}                                                                                                                                                                        
+	& \multicolumn{1}{r|}{1}    
+	& \multicolumn{1}{r|}{10}   
+	 \\ \hline
+        \multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Average Response Time:\end{tabular}}
+        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Product Name: Panado
+					\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}3604ms\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}tba\end{tabular}}      
+	& \multicolumn{1}{l|}{}                                                                                                                                                                        
+	& \multicolumn{1}{r|}{1}    
+	& \multicolumn{1}{r|}{10}   
+	 \\ \hline
+        \multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Throughput (number of requests/minutes):\end{tabular}}
+        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Product Name: Panado
+					\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}8,913.848/minute \end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}tba\end{tabular}}      
+	& \multicolumn{1}{l|}{}                                                                                                                                                                        
+	& \multicolumn{1}{r|}{1}    
+	& \multicolumn{1}{r|}{10}   
+	 \\ \hline
+        \multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Kilobytes Received (KB/sec):\end{tabular}}
+        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Product Name: Panado
+					\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}121.37/sec\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}tba\end{tabular}}      
+	& \multicolumn{1}{l|}{}                                                                                                                                                                        
+	& \multicolumn{1}{r|}{1}    
+	& \multicolumn{1}{r|}{10}   
+	 \\ \hline
+        \multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Kilobytes Sent KB/sec:\end{tabular}}
+        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Product Name: Panado
+					\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}83.40\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}tba\end{tabular}}      
+	& \multicolumn{1}{l|}{}                                                                                                                                                                        
+	& \multicolumn{1}{r|}{1}    
+	& \multicolumn{1}{r|}{10}   
+	 \\ \hline
+        \multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Error percentage: \end{tabular}}
+        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Product Name: Panado
+					\end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}23.46 \end{tabular}} 
+	& \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}tba\end{tabular}}      
 	& \multicolumn{1}{l|}{}                                                                                                                                                                        
 	& \multicolumn{1}{r|}{1}    
 	& \multicolumn{1}{r|}{10}   
