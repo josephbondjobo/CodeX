@@ -143,31 +143,19 @@ public class Login {
 		lblSlogan.setBackground(Color.WHITE);
 		lblSlogan.setFont(new Font("Segoe UI", Font.BOLD, 50));
 		lblSlogan.setHorizontalAlignment(SwingConstants.CENTER);
-
-		JPanel panel_4 = new JPanel();
-		panel_4.setBackground(Color.WHITE);
-		panel_1.add(panel_4);
-
-		JPanel panel_2 = new JPanel();
-		panel_4.add(panel_2);
-		panel_2.setLayout(new BoxLayout(panel_2, BoxLayout.Y_AXIS));
-		panel_2.setBackground(Color.WHITE);
-
-		JLabel lblNewLabel = new JLabel(" ");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		panel_2.add(lblNewLabel);
-
-		JLabel label_1 = new JLabel(" ");
-		label_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		panel_2.add(label_1);
-
-		JLabel label_3 = new JLabel("Smart Search");
-		panel_2.add(label_3);
-		label_3.setBackground(new Color(220, 20, 60));
-		label_3.setHorizontalTextPosition(SwingConstants.CENTER);
-		label_3.setHorizontalAlignment(SwingConstants.CENTER);
-		label_3.setForeground(SystemColor.activeCaption);
-		label_3.setFont(new Font("Segoe UI", Font.PLAIN, 75));
+		
+		JPanel panel_10 = new JPanel();
+		panel_10.setBackground(Color.WHITE);
+		panel_1.add(panel_10);
+		
+				JLabel label_3 = new JLabel("Smart Search");
+				panel_10.add(label_3);
+				label_3.setAlignmentX(0.5f);
+				label_3.setBackground(new Color(220, 20, 60));
+				label_3.setHorizontalTextPosition(SwingConstants.CENTER);
+				label_3.setHorizontalAlignment(SwingConstants.CENTER);
+				label_3.setForeground(SystemColor.activeCaption);
+				label_3.setFont(new Font("Segoe UI", Font.PLAIN, 75));
 
 		JPanel pnlCenter_Center = new JPanel();
 		pnlCenter_Center.setBackground(Color.WHITE);
@@ -208,64 +196,79 @@ public class Login {
 		PromptSupport.setPrompt("Password", edtPassword);
 		PromptSupport.setFocusBehavior(PromptSupport.FocusBehavior.SHOW_PROMPT, edtPassword);
 		edtPassword.setColumns(10);
+		
+				JPanel panel_3 = new JPanel();
+				pnlInput.add(panel_3);
+				panel_3.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+				panel_3.setBackground(Color.WHITE);
+				
+						JLabel label_4 = new JLabel("                       ");
+						label_4.setFont(new Font("Tahoma", Font.PLAIN, 20));
+						panel_3.add(label_4);
+						
+								JPanel panel_9 = new JPanel();
+								pnlInput.add(panel_9);
+								panel_9.setBackground(Color.WHITE);
+								
+										JButton btnLogin = new JButton("Login");
+										btnLogin.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\login.png"));
+										panel_9.add(btnLogin);
+										btnLogin.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+										btnLogin.setBackground(SystemColor.activeCaptionBorder);
+										btnLogin.setForeground(Color.WHITE);
+										
+												JLabel label_2 = new JLabel("                       ");
+												panel_9.add(label_2);
+												
+														JButton btnExit = new JButton("  Exit     ");
+														btnExit.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\logout.png"));
+														panel_9.add(btnExit);
+														btnExit.setBackground(SystemColor.activeCaptionBorder);
+														btnExit.setForeground(Color.WHITE);
+														btnExit.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+														btnExit.addActionListener(new ActionListener() {
+															public void actionPerformed(ActionEvent arg0) {
+																frmLogin.dispose();
+															}
+														});
+														btnLogin.addActionListener(new ActionListener() {
+															public void actionPerformed(ActionEvent arg0) {
+																//=======Get user from http rest call=====
+																userdetailnew = getuserdetail.getLoginFromServer("", "", "", "");
+																if(userdetailnew == null){
+																	JOptionPane.showMessageDialog(null, "Check your internet connection!");
+																}else{
+																	if(edtUsername.getText().equals(userdetailnew.getUserName()) && edtPassword.getText().equals(userdetailnew.getUserPassword())){
+																		frmLogin.dispose();
+																		MainMenu menu = new MainMenu();
+																		menu.frmMenu.setVisible(true);
+																	}
+																	else{
+																		JOptionPane.showMessageDialog(null, "Invalid Credentials");
+																	}
+																}
+															}
+														});
 
 		JPanel pnlCenter_South = new JPanel();
 		pnlCenter_South.setBackground(Color.WHITE);
 		pnlBorder.add(pnlCenter_South, BorderLayout.SOUTH);
 		pnlCenter_South.setLayout(new BoxLayout(pnlCenter_South, BoxLayout.Y_AXIS));
-
-		JPanel panel_3 = new JPanel();
-		pnlCenter_South.add(panel_3);
-		panel_3.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		panel_3.setBackground(Color.WHITE);
-
-		JLabel label_4 = new JLabel("                       ");
-		label_4.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		panel_3.add(label_4);
-
-		JPanel panel_9 = new JPanel();
-		pnlCenter_South.add(panel_9);
-		panel_9.setBackground(Color.WHITE);
-
-		JButton btnLogin = new JButton("Login");
-		btnLogin.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\login.png"));
-		panel_9.add(btnLogin);
-		btnLogin.setFont(new Font("Segoe UI", Font.PLAIN, 20));
-		btnLogin.setBackground(SystemColor.activeCaptionBorder);
-		btnLogin.setForeground(Color.WHITE);
-
-		JLabel label_2 = new JLabel("                       ");
-		panel_9.add(label_2);
-
-		JButton btnExit = new JButton("  Exit     ");
-		btnExit.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\logout.png"));
-		panel_9.add(btnExit);
-		btnExit.setBackground(SystemColor.activeCaptionBorder);
-		btnExit.setForeground(Color.WHITE);
-		btnExit.setFont(new Font("Segoe UI", Font.PLAIN, 20));
-		btnExit.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				frmLogin.dispose();
-			}
-		});
-		btnLogin.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				//=======Get user from http rest call=====
-				userdetailnew = getuserdetail.getLoginFromServer("", "", "", "");
-				if(userdetailnew == null){
-					JOptionPane.showMessageDialog(null, "Check your internet connection!");
-				}else{
-					if(edtUsername.getText().equals(userdetailnew.getUserName()) && edtPassword.getText().equals(userdetailnew.getUserPassword())){
-						frmLogin.dispose();
-						MainMenu menu = new MainMenu();
-						menu.frmMenu.setVisible(true);
-					}
-					else{
-						JOptionPane.showMessageDialog(null, "Invalid Credentials");
-					}
-				}
-			}
-		});
+		
+				JPanel panel_4 = new JPanel();
+				pnlCenter_South.add(panel_4);
+				panel_4.setBackground(Color.WHITE);
+				
+						JPanel panel_2 = new JPanel();
+						panel_4.add(panel_2);
+						panel_2.setLayout(new BoxLayout(panel_2, BoxLayout.Y_AXIS));
+						panel_2.setBackground(Color.WHITE);
+						
+								JLabel lblNewLabel = new JLabel("");
+								lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\pills1.jpg"));
+								lblNewLabel.setAlignmentX(0.5f);
+								lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+								panel_2.add(lblNewLabel);
 
 		JPanel pnl_South = new JPanel();
 		pnl_South.setBackground(Color.WHITE);
