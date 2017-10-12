@@ -11,4 +11,5 @@ Eunice:
 A final Year BSc CS Student at the University of Pretoria with efficient skills in various programming languages (C++, Java) , web development( HTML, Bootstrap) and others(SQL, Android, MEAN stack). I am also drawn towards creative writing, enjoy photography and am keen to learning new things in these fields.
 
 Tim Kirker:
-I am currently finishing off my BSc IT and Enteprises at the University of Pretoria. 
+I am currently finishing off my BSc IT and Enteprises at the University of Pretoria. This has allowed me to 
+develop not only my logic, analysis and programming skills
