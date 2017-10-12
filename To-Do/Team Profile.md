@@ -12,6 +12,6 @@ A final Year BSc CS Student at the University of Pretoria with efficient skills 
 
 Tim Kirker:
 I am currently finishing off my BSc IT and Enteprises at the University of Pretoria. This has allowed me to 
-develop not only my logic, analysis and programming skills but has also allowed 
-me to strengthen my business 
-management skills as well.
+develop not only my logic, analysis and programming skills but has also allowed me to strengthen my 
+business management skills as well. I have done part time front end web development for a few different 
+businesses as well as have competed in the discovery hackathon.
