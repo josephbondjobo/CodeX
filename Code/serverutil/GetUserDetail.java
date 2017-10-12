@@ -23,8 +23,9 @@ public class GetUserDetail {
 		String http = SETUP_HTTP + "systemuser/" + pDeviceId + "/serverip/" + pServerIp + "/appname/" + pAppName
 				+ "/version/" + pVersion;
 
-		http = "http://197.242.145.230:8080/SmartServerPharma/systemuser/7c64442a-b839-4079-8f27-53e9cc8db41a/serverip/197.242.145.230:8080/appname/SMARTREP/version/1.0";
+		//http = "http://197.242.145.230:8080/SmartServerPharma/systemuser/7c64442a-b839-4079-8f27-53e9cc8db41a/serverip/197.242.145.230:8080/appname/SMARTREP/version/1.0";
 		//http = "http://197.242.145.230:8080/SmartServerPharma/systemuser/CodeX_Project_University_Of_Pretoria/serverip/197.242.145.230:8080/appname/SMARTSEARCH/version/1.0";
+		http = "http://197.242.145.230:8080/SmartServerPharma/systemuser/89b85798-cf29-4a31-ac2b-b4f2858e3fc8/serverip/197.242.145.230:8080/appname/SMARTREP/version/1.0";
 
         try {
 
