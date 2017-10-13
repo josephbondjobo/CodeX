@@ -1,11 +1,9 @@
-package com.reroute.main;
+package cos301.main;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-import com.reroute.datasource.Product;
-import com.reroute.datasource.ProductDao;
-import com.reroute.datasource.ProductImpl;
-import com.reroute.tools.NumericUtil;
+import cos301.datasource.Product;
+import cos301.util.NumericUtil;
 
 import java.awt.BorderLayout;
 import javax.swing.JButton;
@@ -33,9 +31,6 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 
-import org.apache.lucene.search.spell.PlainTextDictionary;
-import org.apache.lucene.search.spell.SpellChecker;
-import org.apache.lucene.store.Directory;
 import java.awt.GridLayout;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -47,9 +42,9 @@ import java.awt.SystemColor;
 public class SearchProduct extends JFrame{
 
 	private String[] progress = new String[]{"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"};
-	private LocalDb localdb = null;
+//	private LocalDb localdb = null;
 	public JFrame frmSearchProduct;
-	private ProductDao productdao = new ProductImpl();
+//	private ProductDao productdao = new ProductImpl();
 	/*Constant variables*/
 	private String[] prodSchedOptions = new String[]{"1","2","3","4","5","6","7","&"};
 
@@ -60,6 +55,7 @@ public class SearchProduct extends JFrame{
 	private JTextField edtProductStrength = new JTextField();
 	private JTextField edtProductPack = new JTextField();
 	private TextArea edtProductDescrip = new TextArea();
+        private SOAPSearch soap = new SOAPSearch();
 
 	/*Combo variables*/
 	private JComboBox<String> cmbProductSched = new JComboBox<String>();
@@ -186,13 +182,15 @@ public class SearchProduct extends JFrame{
 						JOptionPane.showMessageDialog(null, "Product name must be at least 3 characters long");
 					}
 					else{
+                                                
 						aProductList = new ArrayList<Product>();
 						//get time here
 						startRunningTime = new Date();
-						aProductList = productdao.getProductNameLike(str);
+//						aProductList = productdao.getProductNameLike(str);
 						//aProductList = productdao.getProductNameLike1(name1);
-						endRunningTime = new Date();
-
+						aProductList = soap.search(name1);
+                                                endRunningTime = new Date();
+                                                
 						if(aProductList.size() > 0){
 							displayValues(aProductList.get(0));
 							for(int i=0;(i< 20 && i<aProductList.size());++i){
@@ -244,7 +242,7 @@ public class SearchProduct extends JFrame{
 		//----------------------------------------------
 		JButton btnSearchID = new JButton("Submit");
 		btnSearchID.setBackground(SystemColor.activeCaptionBorder);
-		btnSearchID.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\submit_send_continue.png"));
+		btnSearchID.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\submit_send_continue.png"));
 		btnSearchID.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		panel_7.add(btnSearchID);
 		btnSearchID.addActionListener(new ActionListener() {
@@ -256,7 +254,7 @@ public class SearchProduct extends JFrame{
 				else{
 					id = numericutil.str2Int(edtProductID.getText());
 					startRunningTime = new Date();
-					Product product = productdao.getProductOnId(id);
+					Product product = soap.searchById(id);
 					endRunningTime = new Date();
 					if(product != null){
 						displayValues(product);
@@ -527,54 +525,4 @@ public class SearchProduct extends JFrame{
 		cmbProductSched.setSelectedItem(pProduct.getProductSchedule());
 	}
 	//--------------------------------------
-	private void copyDataFromMainDb(){
-		localdb = new LocalDb();
-		localdb.deleteAll();
-		for(int i=0; i<progress.length;++i){
-			System.out.println("=="+(i*100)/36+"%== "+progress[i]);
-			List<Product> aProductList = productdao.getProductNameStartWith(progress[i]);
-			if(aProductList != null){
-				for(int j=0; j< aProductList.size();++j){
-					localdb.enqueue(aProductList.get(j).getProductName(),""+aProductList.get(j).getIdProduct());
-					//localdb.enqueue(""+aProductList.get(j).getIdProduct(),aProductList.get(j).getProductName());
-				}
-			}
-		}
-		System.out.println("===========\nReddis DB size: "+localdb.size());
-		localdb.close();
-	}
-
-	public void spellCheck(String name) throws IOException, Throwable{
-		//spell checker instantiation
-		File dir = new File("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute");
-		Directory directory;// = ;//"C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute";
-		directory = null;
-		SpellChecker sp;
-		try {
-			sp = new SpellChecker(directory);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			sp = null;
-		}
-
-		//index the dictionary
-		sp.indexDictionary(new PlainTextDictionary(new File("Dictionary1.txt")));
-
-		//your 'wrong' search
-		String search = name;
-
-		//number of suggestions
-		final int suggestionNumber = 5;
-
-		//get the suggested words
-		String[] suggestions = sp.suggestSimilar(search, suggestionNumber);
-
-		//show the results.
-		System.out.println("Your Term:" + search);
-
-		for (String word : suggestions) {
-			System.out.println("Did you mean:" + word);
-		}
-	}
 }

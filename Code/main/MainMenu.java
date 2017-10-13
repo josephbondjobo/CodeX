@@ -1,4 +1,4 @@
-package com.reroute.main;
+package cos301.main;
 
 import java.awt.Toolkit;
 import javax.swing.JFrame;
@@ -62,7 +62,7 @@ public class MainMenu {
 
 		JButton btnSearch = new JButton("Search Product");
 		btnSearch.setBackground(SystemColor.activeCaptionBorder);
-		btnSearch.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\ic_search_catura_blue.png"));
+		btnSearch.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\ic_search_catura_blue.png"));
 		btnSearch.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -75,7 +75,7 @@ public class MainMenu {
 		pnl_Center.add(btnSearch);
 
 		JButton btnDictionary = new JButton("Dictionary");
-		btnDictionary.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\dictionaryArtboard 1.png"));
+		btnDictionary.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\dictionaryArtboard 1.png"));
 		btnDictionary.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		btnDictionary.setBackground(SystemColor.activeCaptionBorder);
 		btnDictionary.addActionListener(new ActionListener() {
@@ -96,7 +96,7 @@ public class MainMenu {
 				editdictionary.frmEditDictionary.setVisible(true);
 			}
 		});
-		btnEditDictionary.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\dictionary editArtboard 1.png"));
+		btnEditDictionary.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\dictionary editArtboard 1.png"));
 		btnEditDictionary.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		btnEditDictionary.setBackground(SystemColor.activeCaptionBorder);
 		btnEditDictionary.setBounds(621, 349, 258, 221);
@@ -104,8 +104,9 @@ public class MainMenu {
 
 		JButton btnNewButton = new JButton("Delete Product");
 		btnNewButton.setBackground(SystemColor.activeCaptionBorder);
-		btnNewButton.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\delete_trashcanArtboard 1.png"));
+		btnNewButton.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\delete_trashcanArtboard 1.png"));
 		btnNewButton.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+                btnNewButton.setEnabled(false);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
@@ -124,7 +125,7 @@ public class MainMenu {
 
 				JButton btnReturn = new JButton("Return");
 				btnReturn.setBackground(SystemColor.activeCaptionBorder);
-				btnReturn.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\done_back_previous_icon.png"));
+				btnReturn.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\done_back_previous_icon.png"));
 				panel.add(btnReturn);
 				btnReturn.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 

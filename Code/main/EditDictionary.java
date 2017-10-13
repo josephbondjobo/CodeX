@@ -1,4 +1,4 @@
-package com.reroute.main;
+package cos301.main;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -33,12 +33,12 @@ import java.awt.SystemColor;
 public class EditDictionary{
 
 	public JFrame frmEditDictionary;
-	private static final String FILENAME = "C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\Dictionary.txt";
+	//private static final String FILENAME = "C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\Dictionary.txt";
 	private int index = -1;
 	private ArrayList<String> wordsToRead = new ArrayList<String>();
 	private int sizeOfWordsToRead = 0;
 	private JComboBox cmbWords = null;
-	//private static final String FILENAME = "C:\\data\\pharma\\refdata\\dict.txt";
+	private static final String FILENAME = "C:\\data\\pharma\\refdata\\dict.txt";
 	/**
 	 * Create the application.
 	 */

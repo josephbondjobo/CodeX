@@ -1,4 +1,4 @@
-package com.reroute.main;
+package cos301.main;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
-import java.awt.Font;
+import java.awt.Font;   
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -99,7 +99,7 @@ public class Intro extends JFrame {
 
 		JLabel lblLogoUP = new JLabel("");
 		panel.add(lblLogoUP);
-		lblLogoUP.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\Eeufeeslogo1.jpg"));
+		lblLogoUP.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\Eeufeeslogo1.jpg"));
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.WHITE);
@@ -195,7 +195,7 @@ public class Intro extends JFrame {
 			}
 		});
 		btnLogoStart.setBackground(Color.WHITE);
-		btnLogoStart.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\pms_button4.png"));
+		btnLogoStart.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\pms_button4.png"));
 		btnLogoStart.setFont(new Font("Segoe UI", Font.PLAIN, 12));
 		panel_8.add(btnLogoStart);
 
@@ -218,7 +218,7 @@ public class Intro extends JFrame {
 		pnlSouth.add(panel_4, BorderLayout.WEST);
 
 		JLabel lblRerouteLogo = new JLabel("");
-		lblRerouteLogo.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\reroutelogo.png"));
+		lblRerouteLogo.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\reroutelogo.png"));
 		panel_4.add(lblRerouteLogo);
 
 		JPanel panel_5 = new JPanel();
@@ -226,7 +226,7 @@ public class Intro extends JFrame {
 		pnlSouth.add(panel_5, BorderLayout.CENTER);
 
 		JLabel lblDataReLogo = new JLabel("");
-		lblDataReLogo.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\Data-re-logo-web.png"));
+		lblDataReLogo.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\Data-re-logo-web.png"));
 		panel_5.add(lblDataReLogo);
 
 		JPanel panel_6 = new JPanel();

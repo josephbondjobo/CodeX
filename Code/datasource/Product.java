@@ -34,6 +34,16 @@ public class Product {
         this.productSchedule = o.getContents().get(5) == null ? null : o.getContents().get(5).toString();
         this.dosageForm = o.getContents().get(6) == null ? null : o.getContents().get(6).toString();
     }
+
+    public void convertToProduct(ObjectArray o){
+        this.idProduct = o.getContents().get(0) == null ? null : new Integer(o.getContents().get(0).toString());
+        this.productName = o.getContents().get(1) == null ? null : o.getContents().get(1).toString();
+        this.productPack = o.getContents().get(2) == null ? null : o.getContents().get(2).toString();
+        this.productDescription = o.getContents().get(3) == null ? null : o.getContents().get(3).toString();
+        this.dosageForm = o.getContents().get(4) == null ? null : o.getContents().get(4).toString();
+        this.productStrength = o.getContents().get(5) == null ? null : o.getContents().get(5).toString();
+        this.productSchedule = o.getContents().get(6) == null ? null : o.getContents().get(6).toString();
+    }
     // ------
     /**
      * @return the idProduct

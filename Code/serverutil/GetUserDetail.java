@@ -1,4 +1,4 @@
-package com.reroute.serverutil;
+package cos301.serverutil;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -9,7 +9,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-import com.reroute.datasource.UserDetailNew;
+import cos301.datasource.UserDetailNew;
 
 public class GetUserDetail {
 

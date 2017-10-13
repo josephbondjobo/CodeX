@@ -5,10 +5,10 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
-/***Author: Jocelyn*/
+
 public class NumericUtil {
 	Locale locale = Locale.UK;
-	//====================
+
 	public String getOnlyNumerics(String str) {
 		StringBuffer strBuff = new StringBuffer();
 		char minusChar = '-';

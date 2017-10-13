@@ -51,5 +51,20 @@ public class SOAPSearch {
         return list;
     }
     
-    
+    public Product searchById(int id)
+    {
+        Product product = null;
+        try {
+            List<ObjectArray> o = server.runDiagram2("pharma.plz/query2", ""+id, 1, 100, null);
+            if (o.size()> 0){
+                product = new Product(o.get(0));
+                product.convertToProduct(o.get(0));
+                System.out.println(o.get(0).getContents());
+            }
+        } catch (Exception ex) {
+            // TODO handle custom exceptions here
+            //System.out.println(ex);
+        }
+        return product;
+    }    
 }

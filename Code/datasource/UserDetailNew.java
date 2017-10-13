@@ -1,6 +1,6 @@
-package com.reroute.datasource;
+package cos301.datasource;
 
-import com.reroute.tools.NumericUtil;
+import cos301.util.NumericUtil;
 
 public class UserDetailNew {
 

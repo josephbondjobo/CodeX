@@ -1,4 +1,4 @@
-package com.reroute.main;
+package cos301.main;
 
 import java.awt.EventQueue;
 import java.awt.Toolkit;
@@ -12,24 +12,13 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-
 import org.jdesktop.swingx.prompt.PromptSupport;
 
-import com.reroute.datasource.UserDetailNew;
-import com.reroute.serverutil.GetUserDetail;
+import cos301.datasource.UserDetailNew;
+import cos301.serverutil.GetUserDetail;
 
-import de.javasoft.plaf.synthetica.SyntheticaBlackMoonLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaBlackStarLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaBlueIceLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaBlueMoonLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaBlueSteelLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaGreenDreamLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaMauveMetallicLookAndFeel;
+
 import de.javasoft.plaf.synthetica.SyntheticaPlainLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaSilverMoonLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaSkyMetallicLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaWhiteVisionLookAndFeel;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -211,7 +200,7 @@ public class Login {
 								panel_9.setBackground(Color.WHITE);
 								
 										JButton btnLogin = new JButton("Login");
-										btnLogin.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\login.png"));
+										btnLogin.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\login.png"));
 										panel_9.add(btnLogin);
 										btnLogin.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 										btnLogin.setBackground(SystemColor.activeCaptionBorder);
@@ -221,7 +210,7 @@ public class Login {
 												panel_9.add(label_2);
 												
 														JButton btnExit = new JButton("  Exit     ");
-														btnExit.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\logout.png"));
+														btnExit.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\logout.png"));
 														panel_9.add(btnExit);
 														btnExit.setBackground(SystemColor.activeCaptionBorder);
 														btnExit.setForeground(Color.WHITE);
@@ -233,6 +222,7 @@ public class Login {
 														});
 														btnLogin.addActionListener(new ActionListener() {
 															public void actionPerformed(ActionEvent arg0) {
+																	
 																//=======Get user from http rest call=====
 																userdetailnew = getuserdetail.getLoginFromServer("", "", "", "");
 																if(userdetailnew == null){
@@ -265,7 +255,7 @@ public class Login {
 						panel_2.setBackground(Color.WHITE);
 						
 								JLabel lblNewLabel = new JLabel("");
-								lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\pills1.jpg"));
+								lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\pills1.jpg"));
 								lblNewLabel.setAlignmentX(0.5f);
 								lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
 								panel_2.add(lblNewLabel);
