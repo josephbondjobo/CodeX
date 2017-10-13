@@ -192,7 +192,6 @@ For the account user interface, the registered users will be able to login to th
 	The system will:
 	\begin{itemize}
 		\item only use the data contained in the client's existing database.
-		\item learn and evolve from user input (Machine Learning).
 	The system is subjected to working with an internet connection due to the linkage with the cloud. Without this in place, the system will not function.	
 		
 	\end{itemize}
@@ -213,8 +212,8 @@ For the account user interface, the registered users will be able to login to th
 
 	\subsection{Access Channel Requirements}
 		\subsubsection{Human Access Channels}
-	This element must allow for desktop applications to give the user access to the Smart Search.
-	It will also be based on the client side of the two-tier Client-Server architectural pattern.
+	This element must allow for desktop applications to give the user access to the search.
+	It will also be based on the client side of the Cloud-based architectural pattern.
 
 		\subsubsection{System Access Channels}
 	All system access will be made over a uniform interface which will assist in faster development time, ease of maintenance and 		lower overall cost associated with the system. The common interface that will be used will be a RESTful API. All client-side 		interaction will be done via the User Interface which will in turn use the RESTful API set of the system to accomplish the given 	task.
@@ -235,7 +234,7 @@ For the account user interface, the registered users will be able to login to th
 	the cloud provider installing and maintaining software in the cloud and users running the software from their cloud clients
 	over the Internet. It is scalable, which yields a major plus as our system is required to return results at a very high rate.\\
 	
-	\includegraphics[scale=0.5]{Diagrams/Cloud-based Architecural Diagram.jpg}\\
+	\includegraphics[scale=0.2]{Diagrams/Cloud-based Architecural Diagram.jpg}\\
 
 	\subsubsection{Representational State Transfer (REST) Architectural Pattern}
 	REST is an architectural pattern for designing networked applications.
@@ -284,7 +283,7 @@ The smart search application being build will be designed to run on Desktop runn
 			The ability to learn from a user's previous interaction and adapt to it will improve the system’s capability and ability greatly. This can be done by using the dictionary provided by the ZIZO database, for creating new links between products that appear seemingly unrelated.\\
 	
 		\item Handle Concurrent Users:\\
-			This program will be used by many people, in many different fields simultaneously. It is therefore very important for it to be able to handle multiple users at the same time. This will be achieved by the Cloud based architecture.
+			This program will be used by many people, in many different fields simultaneously. It is therefore very important for it to be able to handle multiple users at the same time. This will be achieved by the Cloud-based architecture.
 	
 		\item Scalability:\\
 			Since it is essential for this system to be efficient with large datasets as well as small datasets, scalability will be an essential functional requirement. The system’s ability to stay efficient with very large sets of data is an essential part to the system.
@@ -419,7 +418,6 @@ The smart search application being build will be designed to run on Desktop runn
 		\item The system must perform a smart search.
 		\item The application must be fast.git 
 		\item Smart searches
-		\item Machine Learning
                 \end{itemize}
 		
 		\item \textbf{Nice to have}
