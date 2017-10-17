@@ -1,4 +1,4 @@
-package cos301.main;
+package com.reroute.main;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -27,8 +27,8 @@ public class Dictionary {
 	private JTextField edtKey2;
 	private String word1 = "";
 	private String word2 = "";
-//	private static final String FILENAME = "C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\Dictionary.txt";
-	private static final String FILENAME = "C:\\data\\pharma\\refdata\\dict.txt";
+	private static final String FILENAME = "C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\Dictionary.txt";
+	//private static final String FILENAME = "C:\\data\\pharma\\refdata\\dict.txt";
 	/**
 	 * Create the application.
 	 */
@@ -99,7 +99,7 @@ public class Dictionary {
 
 		JLabel lblInstruction = new JLabel("Enter keywords with same meaning : ");
 		panel_3.add(lblInstruction);
-		lblInstruction.setForeground(new Color(220, 20, 60));
+		lblInstruction.setForeground(SystemColor.activeCaption);
 		lblInstruction.setFont(new Font("Segoe UI", Font.PLAIN, 30));
 		lblInstruction.setHorizontalAlignment(SwingConstants.LEFT);
 
@@ -126,7 +126,8 @@ public class Dictionary {
 		edtKey2.setColumns(20);
 
 		JButton btnDictionarySubmit = new JButton("Submit");
-		btnDictionarySubmit.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\submit_send_continue.png"));
+		btnDictionarySubmit.setForeground(SystemColor.textHighlight);
+		btnDictionarySubmit.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\submit_send_continue.png"));
 		btnDictionarySubmit.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		btnDictionarySubmit.setBackground(SystemColor.activeCaptionBorder);
 		btnDictionarySubmit.addActionListener(new ActionListener() {
@@ -147,17 +148,36 @@ public class Dictionary {
 		JPanel pnlSouth = new JPanel();
 		pnlSouth.setBackground(Color.WHITE);
 		frmDictionary.getContentPane().add(pnlSouth, BorderLayout.SOUTH);
+		pnlSouth.setLayout(new BorderLayout(0, 0));
 
 		JPanel panel_4 = new JPanel();
-		pnlSouth.add(panel_4);
+		pnlSouth.add(panel_4, BorderLayout.SOUTH);
 		panel_4.setLayout(new BoxLayout(panel_4, BoxLayout.Y_AXIS));
 		panel_4.setBackground(Color.WHITE);
 
+		JPanel panel_5 = new JPanel();
+		FlowLayout flowLayout_5 = (FlowLayout) panel_5.getLayout();
+		flowLayout_5.setAlignment(FlowLayout.LEFT);
+		panel_5.setBackground(Color.WHITE);
+		panel_4.add(panel_5);
+
+		JLabel lblNewLabel_2 = new JLabel("          ");
+		lblNewLabel_2.setFont(new Font("Segoe UI", Font.PLAIN, 12));
+		panel_5.add(lblNewLabel_2);
+
 		JButton btnReturn = new JButton("Return");
+		btnReturn.setForeground(SystemColor.textHighlight);
+		panel_5.add(btnReturn);
 		btnReturn.setBackground(SystemColor.activeCaptionBorder);
-		btnReturn.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\done_back_previous_icon.png"));
-		panel_4.add(btnReturn);
+		btnReturn.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\done_back_previous_icon.png"));
 		btnReturn.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+		btnReturn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				frmDictionary.dispose();
+				MainMenu mainmenu = new MainMenu();
+				mainmenu.frmMenu.setVisible(true);
+			}
+		});
 
 		JLabel lblNewLabel = new JLabel("     ");
 		panel_4.add(lblNewLabel);
@@ -166,13 +186,14 @@ public class Dictionary {
 		JLabel label = new JLabel("     ");
 		panel_4.add(label);
 		label.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnReturn.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				frmDictionary.dispose();
-				MainMenu mainmenu = new MainMenu();
-				mainmenu.frmMenu.setVisible(true);
-			}
-		});
+
+		JPanel panel_6 = new JPanel();
+		panel_6.setBackground(Color.WHITE);
+		pnlSouth.add(panel_6, BorderLayout.NORTH);
+
+		JLabel label_1 = new JLabel("");
+		label_1.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\pills1.jpg"));
+		panel_6.add(label_1);
 	}
 
 	public void fileWrite(String key1, String key2){
