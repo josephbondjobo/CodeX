@@ -1,4 +1,4 @@
-package cos301.main;
+package com.reroute.main;
 
 import java.awt.EventQueue;
 import java.awt.Toolkit;
@@ -12,13 +12,24 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+
 import org.jdesktop.swingx.prompt.PromptSupport;
 
-import cos301.datasource.UserDetailNew;
-import cos301.serverutil.GetUserDetail;
+import com.reroute.datasource.UserDetailNew;
+import com.reroute.serverutil.GetUserDetail;
 
-
+import de.javasoft.plaf.synthetica.SyntheticaBlackMoonLookAndFeel;
+import de.javasoft.plaf.synthetica.SyntheticaBlackStarLookAndFeel;
+import de.javasoft.plaf.synthetica.SyntheticaBlueIceLookAndFeel;
+import de.javasoft.plaf.synthetica.SyntheticaBlueMoonLookAndFeel;
+import de.javasoft.plaf.synthetica.SyntheticaBlueSteelLookAndFeel;
+import de.javasoft.plaf.synthetica.SyntheticaGreenDreamLookAndFeel;
+import de.javasoft.plaf.synthetica.SyntheticaLookAndFeel;
+import de.javasoft.plaf.synthetica.SyntheticaMauveMetallicLookAndFeel;
 import de.javasoft.plaf.synthetica.SyntheticaPlainLookAndFeel;
+import de.javasoft.plaf.synthetica.SyntheticaSilverMoonLookAndFeel;
+import de.javasoft.plaf.synthetica.SyntheticaSkyMetallicLookAndFeel;
+import de.javasoft.plaf.synthetica.SyntheticaWhiteVisionLookAndFeel;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -31,6 +42,8 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.SystemColor;
 import javax.swing.ImageIcon;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Login {
 	public int colorDarkred = 0xDa1d2c;
@@ -132,19 +145,19 @@ public class Login {
 		lblSlogan.setBackground(Color.WHITE);
 		lblSlogan.setFont(new Font("Segoe UI", Font.BOLD, 50));
 		lblSlogan.setHorizontalAlignment(SwingConstants.CENTER);
-		
+
 		JPanel panel_10 = new JPanel();
 		panel_10.setBackground(Color.WHITE);
 		panel_1.add(panel_10);
-		
-				JLabel label_3 = new JLabel("Smart Search");
-				panel_10.add(label_3);
-				label_3.setAlignmentX(0.5f);
-				label_3.setBackground(new Color(220, 20, 60));
-				label_3.setHorizontalTextPosition(SwingConstants.CENTER);
-				label_3.setHorizontalAlignment(SwingConstants.CENTER);
-				label_3.setForeground(SystemColor.activeCaption);
-				label_3.setFont(new Font("Segoe UI", Font.PLAIN, 75));
+
+				JLabel lblSmartSearchPharmaceuutical = new JLabel("Smart Search Pharmaceutical");
+				panel_10.add(lblSmartSearchPharmaceuutical);
+				lblSmartSearchPharmaceuutical.setAlignmentX(0.5f);
+				lblSmartSearchPharmaceuutical.setBackground(new Color(220, 20, 60));
+				lblSmartSearchPharmaceuutical.setHorizontalTextPosition(SwingConstants.CENTER);
+				lblSmartSearchPharmaceuutical.setHorizontalAlignment(SwingConstants.CENTER);
+				lblSmartSearchPharmaceuutical.setForeground(SystemColor.activeCaption);
+				lblSmartSearchPharmaceuutical.setFont(new Font("Segoe UI", Font.PLAIN, 75));
 
 		JPanel pnlCenter_Center = new JPanel();
 		pnlCenter_Center.setBackground(Color.WHITE);
@@ -185,44 +198,43 @@ public class Login {
 		PromptSupport.setPrompt("Password", edtPassword);
 		PromptSupport.setFocusBehavior(PromptSupport.FocusBehavior.SHOW_PROMPT, edtPassword);
 		edtPassword.setColumns(10);
-		
+
 				JPanel panel_3 = new JPanel();
 				pnlInput.add(panel_3);
 				panel_3.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 				panel_3.setBackground(Color.WHITE);
-				
+
 						JLabel label_4 = new JLabel("                       ");
 						label_4.setFont(new Font("Tahoma", Font.PLAIN, 20));
 						panel_3.add(label_4);
-						
+
 								JPanel panel_9 = new JPanel();
 								pnlInput.add(panel_9);
 								panel_9.setBackground(Color.WHITE);
-								
+
 										JButton btnLogin = new JButton("Login");
-										btnLogin.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\login.png"));
+										btnLogin.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\login.png"));
 										panel_9.add(btnLogin);
 										btnLogin.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 										btnLogin.setBackground(SystemColor.activeCaptionBorder);
-										btnLogin.setForeground(Color.WHITE);
-										
-												JLabel label_2 = new JLabel("                       ");
-												panel_9.add(label_2);
-												
-														JButton btnExit = new JButton("  Exit     ");
-														btnExit.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\logout.png"));
-														panel_9.add(btnExit);
-														btnExit.setBackground(SystemColor.activeCaptionBorder);
-														btnExit.setForeground(Color.WHITE);
-														btnExit.setFont(new Font("Segoe UI", Font.PLAIN, 20));
-														btnExit.addActionListener(new ActionListener() {
-															public void actionPerformed(ActionEvent arg0) {
-																frmLogin.dispose();
+										btnLogin.setForeground(SystemColor.textHighlight);
+
+														JPanel panel_11 = new JPanel();
+														panel_11.setBackground(Color.WHITE);
+														pnlInput.add(panel_11);
+
+														JLabel lblNewLabel_1 = new JLabel("Forgot Password?");
+														lblNewLabel_1.addMouseListener(new MouseAdapter() {
+															@Override
+															public void mouseClicked(MouseEvent arg0) {
+																JOptionPane.showMessageDialog(null, "Please send an email at: support@reroute.co.za");
 															}
 														});
+														lblNewLabel_1.setFont(new Font("Segoe UI", Font.PLAIN, 12));
+														lblNewLabel_1.setForeground(Color.RED);
+														panel_11.add(lblNewLabel_1);
 														btnLogin.addActionListener(new ActionListener() {
 															public void actionPerformed(ActionEvent arg0) {
-																	
 																//=======Get user from http rest call=====
 																userdetailnew = getuserdetail.getLoginFromServer("", "", "", "");
 																if(userdetailnew == null){
@@ -244,32 +256,59 @@ public class Login {
 		pnlCenter_South.setBackground(Color.WHITE);
 		pnlBorder.add(pnlCenter_South, BorderLayout.SOUTH);
 		pnlCenter_South.setLayout(new BoxLayout(pnlCenter_South, BoxLayout.Y_AXIS));
-		
+
 				JPanel panel_4 = new JPanel();
 				pnlCenter_South.add(panel_4);
 				panel_4.setBackground(Color.WHITE);
-				
+
 						JPanel panel_2 = new JPanel();
 						panel_4.add(panel_2);
 						panel_2.setLayout(new BoxLayout(panel_2, BoxLayout.Y_AXIS));
 						panel_2.setBackground(Color.WHITE);
-						
+
 								JLabel lblNewLabel = new JLabel("");
-								lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\pills1.jpg"));
+								lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\pills1.jpg"));
 								lblNewLabel.setAlignmentX(0.5f);
 								lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
 								panel_2.add(lblNewLabel);
 
 		JPanel pnl_South = new JPanel();
 		pnl_South.setBackground(Color.WHITE);
-		FlowLayout flowLayout_1 = (FlowLayout) pnl_South.getLayout();
-		flowLayout_1.setAlignment(FlowLayout.RIGHT);
 		frmLogin.getContentPane().add(pnl_South, BorderLayout.SOUTH);
+		pnl_South.setLayout(new BorderLayout(0, 0));
 
-		JLabel label = new JLabel("ReRoute Systems");
-		label.setHorizontalTextPosition(SwingConstants.CENTER);
-		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("Segoe UI", Font.PLAIN, 20));
-		pnl_South.add(label);
+		JPanel panel_12 = new JPanel();
+		panel_12.setBackground(Color.WHITE);
+		FlowLayout flowLayout_1 = (FlowLayout) panel_12.getLayout();
+		flowLayout_1.setAlignment(FlowLayout.RIGHT);
+		pnl_South.add(panel_12, BorderLayout.SOUTH);
+
+				JLabel label = new JLabel("ReRoute Systems");
+				panel_12.add(label);
+				label.setHorizontalTextPosition(SwingConstants.CENTER);
+				label.setHorizontalAlignment(SwingConstants.CENTER);
+				label.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+
+				JPanel panel_13 = new JPanel();
+				panel_13.setBackground(Color.WHITE);
+				FlowLayout flowLayout_2 = (FlowLayout) panel_13.getLayout();
+				flowLayout_2.setAlignment(FlowLayout.LEFT);
+				pnl_South.add(panel_13, BorderLayout.NORTH);
+
+				JLabel lblNewLabel_2 = new JLabel("          ");
+				panel_13.add(lblNewLabel_2);
+				lblNewLabel_2.setFont(new Font("Segoe UI", Font.PLAIN, 12));
+
+																		JButton btnExit = new JButton("  Exit     ");
+																		panel_13.add(btnExit);
+																		btnExit.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\logout.png"));
+																		btnExit.setBackground(SystemColor.activeCaptionBorder);
+																		btnExit.setForeground(SystemColor.textHighlight);
+																		btnExit.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+																		btnExit.addActionListener(new ActionListener() {
+																			public void actionPerformed(ActionEvent arg0) {
+																				frmLogin.dispose();
+																			}
+																		});
 	}
 }
