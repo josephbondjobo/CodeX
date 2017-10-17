@@ -1,4 +1,4 @@
-package cos301.main;
+package com.reroute.main;
 
 import java.awt.Toolkit;
 import javax.swing.JFrame;
@@ -15,6 +15,8 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
 import javax.swing.UIManager;
+import javax.swing.SwingConstants;
+import java.awt.FlowLayout;
 
 public class MainMenu {
 	public JFrame frmMenu;
@@ -49,7 +51,7 @@ public class MainMenu {
 		pnl_North.setBackground(Color.WHITE);
 		frmMenu.getContentPane().add(pnl_North, BorderLayout.NORTH);
 
-		JLabel lblSmartSearchMenu = new JLabel("Smart Search Menu");
+		JLabel lblSmartSearchMenu = new JLabel("Smart Search Pharmaceutical Menu");
 		lblSmartSearchMenu.setFont(new Font("Segoe UI", Font.PLAIN, 30));
 		pnl_North.add(lblSmartSearchMenu);
 		lblSmartSearchMenu.setForeground(new Color(220, 20, 60));
@@ -61,8 +63,9 @@ public class MainMenu {
 		pnl_Center.setLayout(null);
 
 		JButton btnSearch = new JButton("Search Product");
+		btnSearch.setForeground(SystemColor.textHighlight);
 		btnSearch.setBackground(SystemColor.activeCaptionBorder);
-		btnSearch.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\ic_search_catura_blue.png"));
+		btnSearch.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\ic_search_catura_blue.png"));
 		btnSearch.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -75,7 +78,8 @@ public class MainMenu {
 		pnl_Center.add(btnSearch);
 
 		JButton btnDictionary = new JButton("Dictionary");
-		btnDictionary.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\dictionaryArtboard 1.png"));
+		btnDictionary.setForeground(SystemColor.textHighlight);
+		btnDictionary.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\dictionaryArtboard 1.png"));
 		btnDictionary.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		btnDictionary.setBackground(SystemColor.activeCaptionBorder);
 		btnDictionary.addActionListener(new ActionListener() {
@@ -89,6 +93,7 @@ public class MainMenu {
 		pnl_Center.add(btnDictionary);
 
 		JButton btnEditDictionary = new JButton("Edit Dictionary");
+		btnEditDictionary.setForeground(SystemColor.textHighlight);
 		btnEditDictionary.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu.dispose();
@@ -96,17 +101,17 @@ public class MainMenu {
 				editdictionary.frmEditDictionary.setVisible(true);
 			}
 		});
-		btnEditDictionary.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\dictionary editArtboard 1.png"));
+		btnEditDictionary.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\dictionary editArtboard 1.png"));
 		btnEditDictionary.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		btnEditDictionary.setBackground(SystemColor.activeCaptionBorder);
 		btnEditDictionary.setBounds(621, 349, 258, 221);
 		pnl_Center.add(btnEditDictionary);
 
 		JButton btnNewButton = new JButton("Delete Product");
+		btnNewButton.setForeground(Color.RED);
 		btnNewButton.setBackground(SystemColor.activeCaptionBorder);
-		btnNewButton.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\delete_trashcanArtboard 1.png"));
+		btnNewButton.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\delete_trashcanArtboard 1.png"));
 		btnNewButton.setFont(new Font("Segoe UI", Font.PLAIN, 20));
-                btnNewButton.setEnabled(false);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
@@ -117,17 +122,37 @@ public class MainMenu {
 		JPanel pnl_South = new JPanel();
 		pnl_South.setBackground(Color.WHITE);
 		frmMenu.getContentPane().add(pnl_South, BorderLayout.SOUTH);
+		pnl_South.setLayout(new BorderLayout(0, 0));
 
 		JPanel panel = new JPanel();
-		pnl_South.add(panel);
+		pnl_South.add(panel, BorderLayout.SOUTH);
 		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 		panel.setBackground(Color.WHITE);
 
-				JButton btnReturn = new JButton("Return");
-				btnReturn.setBackground(SystemColor.activeCaptionBorder);
-				btnReturn.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\done_back_previous_icon.png"));
-				panel.add(btnReturn);
-				btnReturn.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+				JPanel panel_2 = new JPanel();
+				FlowLayout flowLayout = (FlowLayout) panel_2.getLayout();
+				flowLayout.setAlignment(FlowLayout.LEFT);
+				panel_2.setBackground(Color.WHITE);
+				panel.add(panel_2);
+
+				JLabel lblNewLabel_2 = new JLabel("          ");
+				lblNewLabel_2.setFont(new Font("Segoe UI", Font.PLAIN, 12));
+				panel_2.add(lblNewLabel_2);
+
+								JButton btnReturn = new JButton("Return");
+								btnReturn.setForeground(SystemColor.textHighlight);
+								panel_2.add(btnReturn);
+								btnReturn.setHorizontalAlignment(SwingConstants.LEFT);
+								btnReturn.setBackground(SystemColor.activeCaptionBorder);
+								btnReturn.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\done_back_previous_icon.png"));
+								btnReturn.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+								btnReturn.addActionListener(new ActionListener() {
+									public void actionPerformed(ActionEvent arg0) {
+										frmMenu.dispose();
+										Login login = new Login();
+										login.frmLogin.setVisible(true);
+									}
+								});
 
 				JLabel lblNewLabel = new JLabel(" ");
 				lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -136,12 +161,13 @@ public class MainMenu {
 				JLabel label = new JLabel(" ");
 				label.setFont(new Font("Tahoma", Font.PLAIN, 20));
 				panel.add(label);
-				btnReturn.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						frmMenu.dispose();
-						Login login = new Login();
-						login.frmLogin.setVisible(true);
-					}
-				});
+
+				JPanel panel_1 = new JPanel();
+				panel_1.setBackground(Color.WHITE);
+				pnl_South.add(panel_1, BorderLayout.NORTH);
+
+				JLabel lblNewLabel_1 = new JLabel("");
+				lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\pills1.jpg"));
+				panel_1.add(lblNewLabel_1);
 	}
 }
