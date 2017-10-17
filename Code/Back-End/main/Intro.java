@@ -1,4 +1,4 @@
-package cos301.main;
+package com.reroute.main;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -6,9 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
-import java.awt.Font;   
+import java.awt.Font;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -97,25 +98,48 @@ public class Intro extends JFrame {
 		panel.setBackground(Color.WHITE);
 		pnlBottom.add(panel);
 
-		JLabel lblLogoUP = new JLabel("");
-		panel.add(lblLogoUP);
-		lblLogoUP.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\Eeufeeslogo1.jpg"));
+		JLabel label_6 = new JLabel("CODE X");
+		label_6.setVerticalAlignment(SwingConstants.TOP);
+		label_6.setHorizontalTextPosition(SwingConstants.CENTER);
+		label_6.setHorizontalAlignment(SwingConstants.CENTER);
+		label_6.setForeground(new Color(218, 29, 44));
+		label_6.setFont(new Font("Segoe UI", Font.PLAIN, 90));
+		label_6.setBackground(new Color(178, 34, 34));
+		panel.add(label_6);
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.WHITE);
 		pnlBottom.add(panel_1);
 
-		JLabel lblNewLabel = new JLabel("COS301 Main Project");
-		panel_1.add(lblNewLabel);
-		lblNewLabel.setFont(new Font("Segoe UI", Font.PLAIN, 30));
+		JLabel label_7 = new JLabel("EXCEED | EXCEL | EXPRESS");
+		label_7.setVerticalTextPosition(SwingConstants.BOTTOM);
+		label_7.setVerticalAlignment(SwingConstants.TOP);
+		label_7.setHorizontalTextPosition(SwingConstants.CENTER);
+		label_7.setHorizontalAlignment(SwingConstants.CENTER);
+		label_7.setFont(new Font("Segoe UI", Font.BOLD, 30));
+		label_7.setBackground(new Color(255, 62, 62));
+		panel_1.add(label_7);
 
-		JPanel panel_9 = new JPanel();
-		panel_9.setBackground(Color.WHITE);
-		pnlBottom.add(panel_9);
+		JPanel panel_12 = new JPanel();
+		panel_12.setBackground(Color.WHITE);
+		pnlBottom.add(panel_12);
 
-		JLabel lblNewLabel_1 = new JLabel("Department of Computer Science ");
-		lblNewLabel_1.setFont(new Font("Segoe UI", Font.BOLD, 16));
-		panel_9.add(lblNewLabel_1);
+		JLabel label_8 = new JLabel("Smart Search Pharmaceutical");
+		label_8.setHorizontalTextPosition(SwingConstants.CENTER);
+		label_8.setHorizontalAlignment(SwingConstants.CENTER);
+		label_8.setForeground(SystemColor.activeCaption);
+		label_8.setFont(new Font("Segoe UI", Font.PLAIN, 65));
+		label_8.setBackground(new Color(220, 20, 60));
+		label_8.setAlignmentX(0.5f);
+		panel_12.add(label_8);
+
+				JPanel panel_9 = new JPanel();
+				panel_9.setBackground(Color.WHITE);
+				pnlBottom.add(panel_9);
+
+						JLabel lblNewLabel_1 = new JLabel(" ");
+						lblNewLabel_1.setFont(new Font("Segoe UI", Font.BOLD, 16));
+						panel_9.add(lblNewLabel_1);
 
 		JPanel pnlCenter = new JPanel();
 		pnlCenter.setBorder(null);
@@ -124,6 +148,7 @@ public class Intro extends JFrame {
 		pnlCenter.setLayout(new BoxLayout(pnlCenter, BoxLayout.Y_AXIS));
 
 		JPanel panel_2 = new JPanel();
+		//panel_2.setBackground(new Color(85, 142, 203));
 		panel_2.setBackground(Color.WHITE);
 		pnlCenter.add(panel_2);
 		panel_2.setLayout(new BoxLayout(panel_2, BoxLayout.Y_AXIS));
@@ -143,26 +168,23 @@ public class Intro extends JFrame {
 		panel_2.add(label_1);
 
 		JPanel panel_3 = new JPanel();
+		panel_3.setBorder(new LineBorder(SystemColor.activeCaption));
 		panel_3.setFont(new Font("Segoe UI", Font.PLAIN, 12));
 		FlowLayout flowLayout = (FlowLayout) panel_3.getLayout();
 		panel_3.setBackground(Color.WHITE);
 		pnlCenter.add(panel_3);
 
 		JLabel lbl1 = new JLabel("This project forms part of the Reroute Purchase Management System, an application mainly active in the pharmaceutical space. It entails the use of Big Data, in terms of the database including the names of a massive number of products.");
-		lbl1.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+		lbl1.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		panel_3.add(lbl1);
 
-		JLabel lbl2 = new JLabel("Team CodeX from University of Pretoria has developed a system with the ability to perform efficient searches, as well as identify patterns from client behaviour. Additionally, it offers maintainability for the incredibly fast database, making it the perfect tool to handle Big Data queries.");
-		lbl2.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+		JLabel lbl2 = new JLabel("Team CodeX from the University of Pretoria has developed a system with the ability to perform efficient searches. Additionally, it offers maintainability for the incredibly fast database, making it the perfect tool to handle Big Data queries.");
+		lbl2.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		panel_3.add(lbl2);
 
 		JLabel lbl3 = new JLabel("The project was given by the company ReRoute Systems as they were facing the challenge of linking similar words and search through more than 400000 records at the same time.");
-		lbl3.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+		lbl3.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		panel_3.add(lbl3);
-
-		JLabel lbl4 = new JLabel("Data-Re company provided a license to use the Zizo database and the services in order to complete this project.");
-		lbl4.setFont(new Font("Segoe UI", Font.PLAIN, 15));
-		panel_3.add(lbl4);
 
 		JPanel panel_7 = new JPanel();
 		panel_7.setBackground(Color.WHITE);
@@ -177,36 +199,34 @@ public class Intro extends JFrame {
 		label_4.setFont(new Font("Segoe UI", Font.PLAIN, 12));
 		panel_7.add(label_4);
 
-		JLabel lblPressTheFollowing = new JLabel(" Press the following icon to log into Smart Search system");
-		lblPressTheFollowing.setAlignmentX(0.5f);
-		panel_7.add(lblPressTheFollowing);
-		lblPressTheFollowing.setFont(new Font("Segoe UI", Font.PLAIN, 15));
-
 		JPanel panel_8 = new JPanel();
 		panel_8.setBackground(Color.WHITE);
 		panel_7.add(panel_8);
+						panel_8.setLayout(new BoxLayout(panel_8, BoxLayout.Y_AXIS));
 
-		JButton btnLogoStart = new JButton("");
-		btnLogoStart.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				dispose();
-				Login login = new Login();
-				login.frmLogin.setVisible(true);
-			}
-		});
-		btnLogoStart.setBackground(Color.WHITE);
-		btnLogoStart.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\pms_button4.png"));
-		btnLogoStart.setFont(new Font("Segoe UI", Font.PLAIN, 12));
-		panel_8.add(btnLogoStart);
+				JButton btnLogoStart = new JButton("");
+				btnLogoStart.setAlignmentX(0.5f);
+				panel_8.add(btnLogoStart);
+				btnLogoStart.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent arg0) {
+						dispose();
+						Login login = new Login();
+						login.frmLogin.setVisible(true);
+					}
+				});
+				btnLogoStart.setBackground(Color.WHITE);
+				btnLogoStart.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\pms_button4.png"));
+				btnLogoStart.setFont(new Font("Segoe UI", Font.PLAIN, 12));
+
+								JLabel lblPressTheFollowing = new JLabel(" Press the button to log into Smart Search system");
+								panel_8.add(lblPressTheFollowing);
+								lblPressTheFollowing.setAlignmentX(0.5f);
+								lblPressTheFollowing.setFont(new Font("Segoe UI", Font.BOLD, 15));
 
 		JPanel panel_10 = new JPanel();
 		panel_10.setBackground(Color.WHITE);
 		panel_10.setFont(new Font("Segoe UI", Font.PLAIN, 12));
 		panel_7.add(panel_10);
-
-		JLabel lblNewLabel_3 = new JLabel("Sponsored  by : ");
-		lblNewLabel_3.setFont(new Font("Segoe UI", Font.ITALIC, 16));
-		panel_10.add(lblNewLabel_3);
 
 		JPanel pnlSouth = new JPanel();
 		pnlSouth.setBackground(Color.WHITE);
@@ -218,7 +238,7 @@ public class Intro extends JFrame {
 		pnlSouth.add(panel_4, BorderLayout.WEST);
 
 		JLabel lblRerouteLogo = new JLabel("");
-		lblRerouteLogo.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\reroutelogo.png"));
+		lblRerouteLogo.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\reroutelogo.png"));
 		panel_4.add(lblRerouteLogo);
 
 		JPanel panel_5 = new JPanel();
@@ -226,14 +246,15 @@ public class Intro extends JFrame {
 		pnlSouth.add(panel_5, BorderLayout.CENTER);
 
 		JLabel lblDataReLogo = new JLabel("");
-		lblDataReLogo.setIcon(new ImageIcon("C:\\Users\\Daniel\\Documents\\COS 301\\COS301\\src\\cos301\\Icons-Front-end\\Data-re-logo-web.png"));
+		lblDataReLogo.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\Data-re-logo-web.png"));
 		panel_5.add(lblDataReLogo);
 
 		JPanel panel_6 = new JPanel();
 		panel_6.setBackground(Color.WHITE);
 		pnlSouth.add(panel_6, BorderLayout.EAST);
 
-		JLabel label_2 = new JLabel("CODE X");
+		JLabel label_2 = new JLabel("");
+		label_2.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\Eeufeeslogo1.jpg"));
 		label_2.setVerticalAlignment(SwingConstants.TOP);
 		label_2.setHorizontalTextPosition(SwingConstants.CENTER);
 		label_2.setHorizontalAlignment(SwingConstants.CENTER);
@@ -241,6 +262,15 @@ public class Intro extends JFrame {
 		label_2.setFont(new Font("Segoe UI", Font.PLAIN, 70));
 		label_2.setBackground(new Color(178, 34, 34));
 		panel_6.add(label_2);
+
+		JPanel panel_11 = new JPanel();
+		panel_11.setBackground(Color.WHITE);
+		pnlSouth.add(panel_11, BorderLayout.NORTH);
+
+		JLabel label_5 = new JLabel("Sponsored  by : ");
+		label_5.setVerticalAlignment(SwingConstants.BOTTOM);
+		label_5.setFont(new Font("Segoe UI", Font.ITALIC, 16));
+		panel_11.add(label_5);
 	}
 
 }
