@@ -1,4 +1,4 @@
-package cos301.main;
+package com.reroute.main;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -33,12 +33,12 @@ import java.awt.SystemColor;
 public class EditDictionary{
 
 	public JFrame frmEditDictionary;
-	//private static final String FILENAME = "C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\Dictionary.txt";
+	private static final String FILENAME = "C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\Dictionary.txt";
 	private int index = -1;
 	private ArrayList<String> wordsToRead = new ArrayList<String>();
 	private int sizeOfWordsToRead = 0;
 	private JComboBox cmbWords = null;
-	private static final String FILENAME = "C:\\data\\pharma\\refdata\\dict.txt";
+	//private static final String FILENAME = "C:\\data\\pharma\\refdata\\dict.txt";
 	/**
 	 * Create the application.
 	 */
@@ -89,7 +89,7 @@ public class EditDictionary{
 		JLabel label = new JLabel("Select key words to delete from Dictionary: ");
 		panel_2.add(label);
 		label.setHorizontalAlignment(SwingConstants.LEFT);
-		label.setForeground(new Color(220, 20, 60));
+		label.setForeground(SystemColor.activeCaption);
 		label.setFont(new Font("Segoe UI", Font.PLAIN, 25));
 
 		JPanel panel_3 = new JPanel();
@@ -116,6 +116,7 @@ public class EditDictionary{
 		loadFile();
 		//======================
 		JButton btnDelete = new JButton("Delete");
+		btnDelete.setForeground(Color.RED);
 		btnDelete.setBackground(SystemColor.activeCaptionBorder);
 		btnDelete.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\delete_trashcanArtboard 2.png"));
 		panel_3.add(btnDelete);
@@ -128,6 +129,8 @@ public class EditDictionary{
 				for(int i=0; i<wordsToRead.size();++i){
 					cmbWords.addItem(wordsToRead.get(i));
 				}
+				frmEditDictionary.getContentPane().repaint();
+				frmEditDictionary.getContentPane().validate();
 				JOptionPane.showMessageDialog(null, "Deleted successfully!");
 			}
 		});
@@ -135,12 +138,15 @@ public class EditDictionary{
 
 		JPanel pnlSouth = new JPanel();
 		frmEditDictionary.getContentPane().add(pnlSouth, BorderLayout.SOUTH);
-		pnlSouth.setLayout(new BoxLayout(pnlSouth, BoxLayout.Y_AXIS));
+		pnlSouth.setLayout(new BorderLayout(0, 0));
 
 		JPanel panel = new JPanel();
+
 		panel.setBackground(Color.WHITE);
-		pnlSouth.add(panel);
+		pnlSouth.add(panel, BorderLayout.CENTER);
 		JButton btnSave = new JButton("    Save     ");
+		btnSave.setForeground(SystemColor.textHighlight);
+		btnSave.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		btnSave.setBackground(SystemColor.activeCaptionBorder);
 		btnSave.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\save_load_stiffy_white_icon1.png"));
 		panel.add(btnSave);
@@ -155,15 +161,16 @@ public class EditDictionary{
 				mainmenu.frmMenu.setVisible(true);
 			}
 		});
-		btnSave.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+
 		btnSave.setActionCommand("OK");
-		frmEditDictionary.getRootPane().setDefaultButton(btnSave);
+		//frmEditDictionary.getRootPane().setDefaultButton(btnSave);
 
 		JLabel label_2 = new JLabel("                      ");
 		label_2.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		panel.add(label_2);
 
 		JButton btnReturn = new JButton("Return");
+		btnReturn.setForeground(SystemColor.textHighlight);
 		btnReturn.setBackground(SystemColor.activeCaptionBorder);
 		btnReturn.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\done_back_previous_icon.png"));
 		panel.add(btnReturn);
@@ -178,7 +185,7 @@ public class EditDictionary{
 		btnReturn.setActionCommand("Cancel");
 
 		JPanel panel_1 = new JPanel();
-		pnlSouth.add(panel_1);
+		pnlSouth.add(panel_1, BorderLayout.SOUTH);
 		pnlSouth.setBackground(Color.WHITE);
 		panel_1.setLayout(new BoxLayout(panel_1, BoxLayout.Y_AXIS));
 		panel_1.setBackground(Color.WHITE);
@@ -190,6 +197,15 @@ public class EditDictionary{
 		JLabel label_1 = new JLabel("    ");
 		panel_1.add(label_1);
 		label_1.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+
+		JPanel panel_5 = new JPanel();
+		panel_5.setBackground(Color.WHITE);
+		pnlSouth.add(panel_5, BorderLayout.NORTH);
+
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Jocelyn\\Documents\\Catura\\Java\\ReRoute\\ReRoute\\pills1.jpg"));
+		lblNewLabel.setBackground(Color.WHITE);
+		panel_5.add(lblNewLabel);
 
 	}
 
@@ -228,7 +244,7 @@ public class EditDictionary{
 			String sCurrentLine;
 
 			while ((sCurrentLine = br.readLine()) != null) {
-				System.out.println(sCurrentLine);
+				//System.out.println(sCurrentLine);
 				wordsToRead.add(sCurrentLine);
 			}
 
