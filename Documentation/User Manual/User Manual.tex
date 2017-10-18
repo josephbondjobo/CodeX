@@ -38,21 +38,63 @@
   xleftmargin=0.1\linewidth
 }
 
+
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{listings}
+\lstdefinestyle{TerminalStyle}{
+  language=bash,
+  basicstyle=\small\sffamily,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=3pt,
+  frame=tb,
+  columns=fullflexible,
+  linewidth=0.9\linewidth,
+  xleftmargin=0.1\linewidth
+}
+\lstdefinestyle{HtmlStyle}{
+  language=html,
+  basicstyle=\small\sffamily,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=3pt,
+  frame=tb,
+  columns=fullflexible,
+  linewidth=0.9\linewidth,
+  xleftmargin=0.1\linewidth
+}
+\lstdefinestyle{OutputStyle}{
+  language=html,
+  basicstyle=\small\sffamily,
+  frame=tb,
+  columns=fullflexible,
+  linewidth=0.9\linewidth,
+  xleftmargin=0.1\linewidth
+}
+
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
-\title{\includegraphics[width=12cm]{Eeufeeslogo.jpg} \\
-       Department of Computer Science \\
-       University of Pretoria \\
-       \vspace{0.5cm}
-       Software Engineering\\
-       COS301 Main Project \\
-       \vspace{1.0cm}
-       \begin{large} \textbf{Team CodeX}\\ ReRoute Purchasing Management Systems\end{large}\\
-       \vspace{1.0cm}
-       User Manual \\}
+\title{\includegraphics[width=13cm]{CodeXBanner2rounded.jpg} \\
+       \vspace{0.2cm}
+       \begin{large}
+       \includegraphics[width=13cm]{UserManual.jpg} \\
+       \end{large}
+       }
        
-\date{August 10, 2017} 
-\author{}
+       \vspace{50cm}
+
+\date{} 
+\author{	Bondjobo, Jocelyn 		13232852 		\\
+		Malangu, Daniel		13315120		\\
+		Kirker, Tim			11152402		\\
+		Hammond, Eunice	NK	13222563		\\
+		Burgers, Heinrich		15059538		\\
+}
 
 \begin{document}
 \maketitle
@@ -67,6 +109,7 @@
 
 \newpage
 \pagenumbering{arabic}
+
 
 \section{Introduction}
 Reroute Systems is a software company with different in-house developed applications. The Purchase Management System 
@@ -140,9 +183,9 @@ To be defined.
 			Most issues can be fixed by simply restarting the program or your computer. 
 		\item \textbf{Error communicating to the database:}\\\
 			The database system in use, ZIZO, makes use of SOAP and REST calls to communicate with the rest of the system. Ensure that the system has an internet connection. If you do have an internet connection, ensure that the system is communicating with the database system. 
-		\item \textbf{System crashes:}
+		\item \textbf{System crashes:}\\\
 			Please report any areas or actions that cause(d) the system to crash to the developers.
-		\item \textbf{Faulty data:}
+		\item \textbf{Faulty data:}\\\
 			Reading data into the database is an automated process and faulty data often gets through. Please report such cases to Catura Reroute Systems.
 	\end{enumerate}
 	
