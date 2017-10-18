@@ -174,15 +174,15 @@ public class Intro extends JFrame {
 		panel_3.setBackground(Color.WHITE);
 		pnlCenter.add(panel_3);
 
-		JLabel lbl1 = new JLabel("This project forms part of the Reroute Purchase Management System, an application mainly active in the pharmaceutical space. It entails the use of Big Data, in terms of the database including the names of a massive number of products.");
+		JLabel lbl1 = new JLabel("Smart Search Pharmaceutical is an application mainly active in the pharmaceutical space. It entails the use of Big Data, in terms of the database including the names of a massive number of products with their related informations.");
 		lbl1.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		panel_3.add(lbl1);
 
-		JLabel lbl2 = new JLabel("Team CodeX from the University of Pretoria has developed a system with the ability to perform efficient searches. Additionally, it offers maintainability for the incredibly fast database, making it the perfect tool to handle Big Data queries.");
+		JLabel lbl2 = new JLabel("Team CodeX from the University of Pretoria has developed a system with the ability to perform efficient and fast searches on more than 400000 records.");
 		lbl2.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		panel_3.add(lbl2);
 
-		JLabel lbl3 = new JLabel("The project was given by the company ReRoute Systems as they were facing the challenge of linking similar words and search through more than 400000 records at the same time.");
+		JLabel lbl3 = new JLabel("Additionally, it offers maintainability for the incredibly fast database, making it the perfect tool to handle Big Data queries and linking words with similar meaning to enhance the search.");
 		lbl3.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		panel_3.add(lbl3);
 
