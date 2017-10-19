@@ -44,11 +44,11 @@
       \begin{itemize}
       \item Null Value SOAP Search: 10
       \item SOAP Serach: 10
-      \item Null value SOAP Serach by ID: 10
-      \item SOAP Serach by ID: 10
+      \item Null value SOAP Search by ID: 10
+      \item SOAP Search by ID: 10
       \end{itemize}
 	
-	\subsubsection{Handling of special characters: }
+	\subsubsection{Handling of Special Characters: }
 	The system should be abe to ignore certain user mistakes or certain language rules that are used when the input is entered into the system. The test cases ensure that the exact same list is returned from the database when the special charaters are included in the input as when they are excluded from the input\\
 	Test Cases:
 	 \begin{itemize}
@@ -63,7 +63,7 @@
          \item Name and exclamation search: 0
         \end{itemize}
 
-	\subsubsection{Handling of special characters: }
+	\subsubsection{Handling of Special Characters: }
 	The system should be able to appropriate handle numbers given to it as input. These tests ensure that the application will return products that contain the numerical values given to it by the user.
 	\begin{itemize}
 	\item Measurment search: 10
@@ -74,7 +74,7 @@
 	The system should be abe to ignore certain user mistakes or certain language rules that are used when the input is entered into the system. For delimiter testing we want to check for the maximum number of characters the system will ignore before it returns a list diffrent from expected correct list.\\
 	Test Cases:
 	 \begin{itemize}
-	 \item delimiter search: 10
+	 \item Delimiter Search: 10
 		 \begin{itemize}
          	 \item Name and exclamation search: 10
         	 \item Max number of characters: 5
@@ -94,18 +94,17 @@
 	\subsubsection{Fast Run-time:}
 Because there are very large amounts of data to be searched, it is vital for the program to be very
 efficient. Even though this could be a non-functional requirement, it is vital for this program to be as fast
-and efficient as possible. THis is checked by comparing it to the previous system used by reroute and camparing the two using the follwing test
+and efficient as possible. This is checked by comparing it to the previous system used by Reroute and camparing the two using the follwing test
 
 	Test Case:
 	\begin{itemize}	
-        \item Response time per search: 1 
+        \item Response Time Per Search: 1 
          \end{itemize}
          
 	\subsection{Benchmark Testing:}
 
 	\subsubsection{Handling Concurrent Users:}
-This program will be used by many people, in many different elds simultaneously. It is therefore very important for it to be able to handle multiple users
-at the same time. This will be achieved by the Cloud based architecture.	
+This program will be used by many people, in many different fields simultaneously. It is therefore very important for it to be able to handle multiple users at the same time. This will be achieved by the Cloud-based architecture.	
 	Test Case:
 	\begin{itemize}
         	\item TBD 
@@ -115,7 +114,7 @@ at the same time. This will be achieved by the Cloud based architecture.
 	Since it is essential for this system to be efficient with large datasets as well as small datasets, scalability will be an essential functional requirement. The systems ability to stay efficient with very large sets of data is an essential part to the system. The system should use less storage space and memory than the previous system. The tests should show that the new system iis objectively better than the current systemn when running on the ame hardware.	
 	Test Case:
 	\begin{itemize}
-      	  	\item Rate of compression: 1
+      	  	\item Rate of Compression: 1
         \end{itemize}
 
 	\section{Non-Functional Requirements}	
@@ -127,7 +126,7 @@ Predictive typing is when the program suggests a possible solution as the user i
 The system will not be easily breakable as it will be error proof to a feasible extent, to avoid unnecessary fault and not wholly be affected by the hardware failures. The system should be able to recover quickly from such failures, or at least be able to hold up or return to a valid stage/state.\\
     
 	Score: 0    
-    \subsection{Storing and using search history:}
+    \subsection{Storing and Using Search History:}
 	Being able to store the search history will increase the user experience, help with predictive typing and improve the program's ability to learn and adapt.\\
 
 	Score: 0    
